@@ -1,0 +1,210 @@
+{
+  "name": "Scholar Guard",
+  "type": "npc",
+  "img": "modules/library-thousandfold/assets/portraits/scholar-guard.webp",
+  "prototypeToken": {
+    "name": "Scholar Guard",
+    "texture": {
+      "src": "modules/library-thousandfold/assets/tokens/scholar-guard.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "width": 1,
+    "height": 1,
+    "alpha": 1,
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "actorLink": false
+  },
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 14
+      },
+      "dex": {
+        "value": 12
+      },
+      "con": {
+        "value": 13
+      },
+      "int": {
+        "value": 12
+      },
+      "wis": {
+        "value": 14
+      },
+      "cha": {
+        "value": 10
+      }
+    },
+    "skills": {
+      "prc": {
+        "value": 1
+      },
+      "ins": {
+        "value": 1
+      },
+      "arc": {
+        "value": 1
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calc": "flat",
+        "flat": 16
+      },
+      "hp": {
+        "value": 27,
+        "max": 27,
+        "temp": 0,
+        "tempmax": 0
+      },
+      "movement": {
+        "walk": 30,
+        "units": "ft"
+      }
+    },
+    "details": {
+      "alignment": "lawful neutral",
+      "cr": 1,
+      "type": {
+        "value": "humanoid",
+        "subtype": "library staff"
+      },
+      "biography": {
+        "value": "<h2>Scholar Guard</h2><p>The guardians of the Library of the Thousandfold wear brass-edged armor under ink-blue tabards. They demand names, purpose, and permission to enter; attacking a librarian is a grave offense.</p><p><strong>Gate protocol:</strong> Ask visitors to state the book or person they seek. Refusal or obvious deception results in delay and a senior librarian being summoned.</p><p><strong>Combat:</strong> AC 16, HP 27, halberd +4 to hit, 1d10+2 slashing. They attempt to subdue intruders first, and raise the alarm as a last resort.</p>"
+      }
+    },
+    "traits": {
+      "size": "med",
+      "languages": {
+        "value": [
+          "common"
+        ]
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Library Halberd",
+      "type": "weapon",
+      "img": "icons/weapons/polearms/halberd-crescent-gold.webp",
+      "system": {
+        "description": {
+          "value": "<p>Melee weapon attack: +4 to hit, reach 10 ft., 1d10+2 slashing.</p>"
+        },
+        "identifier": "library-halberd",
+        "type": {
+          "value": "martialM",
+          "baseItem": ""
+        },
+        "equipped": true,
+        "proficient": 1,
+        "damage": {
+          "base": {
+            "number": 1,
+            "denomination": 10,
+            "bonus": "@mod",
+            "types": [
+              "slashing"
+            ],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          },
+          "versatile": null
+        },
+        "activities": {
+          "libraryAttack01": {
+            "type": "attack",
+            "name": "Library Halberd",
+            "activation": {
+              "type": "action",
+              "cost": 1,
+              "condition": ""
+            },
+            "attack": {
+              "ability": "str",
+              "bonus": "",
+              "flat": false,
+              "type": {
+                "value": "mwak",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "includeBase": true,
+              "parts": []
+            },
+            "range": {
+              "value": 10,
+              "long": null,
+              "units": "ft"
+            },
+            "target": {
+              "template": {
+                "type": "",
+                "size": "",
+                "width": "",
+                "units": ""
+              },
+              "affects": {
+                "type": "creature",
+                "count": "1"
+              },
+              "prompt": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Keep the Silence",
+      "type": "feat",
+      "img": "icons/sundries/books/book-symbol-gold-brown.webp",
+      "system": {
+        "description": {
+          "value": "<p>The guard signals fellow watchkeepers rather than shouting; a resonant bell in the guardhouse alerts the gate within 1 round.</p>"
+        },
+        "type": {
+          "value": "monster"
+        },
+        "activities": {}
+      }
+    },
+    {
+      "name": "Nonlethal Training",
+      "type": "feat",
+      "img": "icons/sundries/books/book-symbol-gold-brown.webp",
+      "system": {
+        "description": {
+          "value": "<p>When reducing a creature to 0 HP with a melee attack, the guard may choose to knock the creature unconscious instead of killing it.</p>"
+        },
+        "type": {
+          "value": "monster"
+        },
+        "activities": {}
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "library-thousandfold": {
+      "source": "scholar-guard"
+    }
+  }
+}

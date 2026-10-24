@@ -1,0 +1,35 @@
+{
+  "id": "library-thousandfold",
+  "title": "Library of the Thousandfold \u2014 Grand Gate",
+  "description": "Grand library entrance battlemap with interactive double doors, preplaced Scholar Guards and Librarians, and D&D 5e actor sheets.",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "Library of the Thousandfold Campaign"
+    }
+  ],
+  "compatibility": {
+    "minimum": "12",
+    "verified": "13"
+  },
+  "relationships": {
+    "systems": [
+      {
+        "id": "dnd5e",
+        "type": "system"
+      }
+    ]
+  },
+  "esmodules": [
+    "scripts/import.js"
+  ],
+  "url": "https://github.com/nathan135790/LibraryThousandfold",
+  "manifest": "https://raw.githubusercontent.com/nathan135790/LibraryThousandfold/main/module.json",
+  "download": "https://raw.githubusercontent.com/nathan135790/LibraryThousandfold/main/dist/library-thousandfold.zip",
+  "media": [
+    {
+      "type": "cover",
+      "url": "assets/maps/great-library-gate.webp"
+    }
+  ]
+}
