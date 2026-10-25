@@ -4,7 +4,12 @@ const DATA = `modules/${MODULE}/data`;
 Hooks.once("init", () => {
   game.settings.register(MODULE, "contentImported", {
     name: "Library content imported",
-    hint: "Set automatically when the scene and NPCs are imported into this world.",
+    hint: "Whether the entrance and original NPCs have been imported into this world.",
+    scope: "world", config: false, type: Boolean, default: false
+  });
+  game.settings.register(MODULE, "oswaldImported", {
+    name: "Oswald imported",
+    hint: "Tracks the Oswald Pendlewick addition independently so existing worlds can import him after upgrading.",
     scope: "world", config: false, type: Boolean, default: false
   });
 });
@@ -17,55 +22,66 @@ async function loadJson(path) {
 
 const hasSource = (doc, source) => doc.getFlag(MODULE, "source") === source;
 
+async function ensureActor(file) {
+  const data = await loadJson(`actors/${file}`);
+  const source = data.flags?.[MODULE]?.source;
+  if (!source) throw new Error(`Missing source flag in ${file}`);
+  return game.actors.find(a => hasSource(a, source)) || Actor.create(data);
+}
+
+async function importOswald() {
+  if (!game.user?.isGM) throw new Error("Only the GM may import Library content.");
+  if (game.system.id !== "dnd5e") throw new Error("This actor requires the D&D 5e system.");
+  const oswald = await ensureActor("oswald-pendlewick.json");
+  await game.settings.set(MODULE, "oswaldImported", true);
+  ui.notifications.info("Library of the Thousandfold: Oswald Pendlewick is in the Actors directory.");
+  return oswald;
+}
+
 async function importContent() {
   if (!game.user?.isGM) throw new Error("Only the GM may import Library content.");
   if (game.system.id !== "dnd5e") throw new Error("This actor pack requires the D&D 5e system.");
-
-  const actorData = await Promise.all([loadJson("actors/scholar-guard.json"), loadJson("actors/librarian.json")]);
-  const sceneData = await loadJson("scenes/grand-gate.json");
-  const actors = {};
-  for (const a of actorData) {
-    const source = a.flags[MODULE].source;
-    const existing = game.actors.find(x => hasSource(x, source));
-    actors[source] = existing || await Actor.create(a);
-  }
+  const guard = await ensureActor("scholar-guard.json");
+  const librarian = await ensureActor("librarian.json");
   let scene = game.scenes.find(x => hasSource(x, "grand-gate"));
   if (!scene) {
+    const sceneData = await loadJson("scenes/grand-gate.json");
     const tokenPlan = [
-      ["scholar-guard", 675, 965], ["scholar-guard", 1250, 965],
-      ["grand-library-librarian", 850, 645], ["grand-library-librarian", 1170, 645]
+      [guard, 675, 965], [guard, 1250, 965],
+      [librarian, 850, 645], [librarian, 1170, 645]
     ];
-    const tokens = [];
-    for (const [source, x, y] of tokenPlan) {
-      const actor = actors[source];
-      if (!actor) throw new Error(`Missing actor ${source}`);
+    const tokens = tokenPlan.map(([actor, x, y]) => {
       const proto = actor.prototypeToken.toObject();
-      // Actor linkage and token position are set on the new scene after actor creation.
       delete proto._id;
-      tokens.push({...proto, x, y, actorId: actor.id, actorLink: false,
+      return {...proto, x, y, actorId: actor.id, actorLink: false,
         name: actor.name, disposition: 0,
-        texture: {...proto.texture, src: actor.prototypeToken.texture.src}});
-    }
+        texture: {...proto.texture, src: actor.prototypeToken.texture.src}};
+    });
     scene = await Scene.create({...sceneData, tokens});
   }
+  await importOswald(); // Add to Actors only; he is not preplaced on the gate scene.
   await game.settings.set(MODULE, "contentImported", true);
-  ui.notifications.info("Library of the Thousandfold: scene and actors imported. Open the Scenes tab!");
+  ui.notifications.info("Library of the Thousandfold: entrance scene and all NPCs are ready.");
   return scene;
 }
 
-// Import command remains available to GMs even after dismissing the first prompt.
-globalThis.LibraryThousandfold = {importContent};
+globalThis.LibraryThousandfold = {importContent, importOswald};
 
 Hooks.once("ready", async () => {
-  if (!game.user.isGM || game.system.id !== "dnd5e") return;
-  if (game.settings.get(MODULE, "contentImported")) return;
-  const go = await Dialog.confirm({
+  if (!game.user?.isGM || game.system.id !== "dnd5e") return;
+  const previouslyImported = game.settings.get(MODULE, "contentImported");
+  const oswaldExists = game.actors.some(x => hasSource(x, "oswald-pendlewick"));
+  if (previouslyImported && (game.settings.get(MODULE, "oswaldImported") || oswaldExists)) return;
+
+  const additionOnly = previouslyImported;
+  const yes = await Dialog.confirm({
     title: "Library of the Thousandfold",
-    content: `<p>Import the <strong>Grand Gate</strong> scene, two Scholar Guards, and two Librarians into this world?</p><p>The NPCs will be added to Actors and placed on the map. Your existing scenes and actors will not be overwritten.</p>`,
-    yes: () => true, no: () => false,
-    defaultYes: true
+    content: additionOnly
+      ? `<p>Add <strong>Oswald Pendlewick</strong>, the Time Scholar, to Actors?</p><p>Your existing scene and actors will not be overwritten or replaced.</p>`
+      : `<p>Import the <strong>Grand Gate</strong> scene, Scholar Guards, Librarians and <strong>Oswald Pendlewick</strong>?</p><p>Oswald will be in Actors but will not be placed on the scene. Your existing documents will not be overwritten.</p>`,
+    yes: () => true, no: () => false, defaultYes: true
   });
-  if (!go) return;
-  try { await importContent(); }
+  if (!yes) return;
+  try { await (additionOnly ? importOswald() : importContent()); }
   catch (e) { console.error(`${MODULE} import failed`, e); ui.notifications.error(`Library import failed: ${e.message}`); }
 });

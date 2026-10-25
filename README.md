@@ -8,7 +8,8 @@ A ready-to-import Foundry Virtual Tabletop **D&D 5e** scene and NPC pack for a g
 - Scene with mapped walls, **two separately openable gate doors**, ambient light and preplaced NPC tokens
 - `Scholar Guard` (CR 1, AC 16, HP 27) with a halberd attack, portraits and token art
 - `Grand Library Librarian` (CR 1/8, AC 11, HP 13) with a letter-opener attack, portrait and token art
-- An importer that creates the scene and actors in the world on confirmation when the GM first enables the module
+- **Oswald Pendlewick** (CR 5 suggested miniboss) with original portrait and hourglass token, Chronal Pulse attack, time-based features, and secret time-artifact lore (GM-only). He is **not** placed on the gate scene by default.
+- An importer that creates the scene and NPCs in the world on GM confirmation
 
 ## Install in Foundry
 
@@ -18,7 +19,7 @@ A ready-to-import Foundry Virtual Tabletop **D&D 5e** scene and NPC pack for a g
 https://raw.githubusercontent.com/nathan135790/LibraryThousandfold/main/module.json
 ```
 
-Foundry Setup → Add-on Modules → Install Module → Manifest URL. Enable the module in a D&D 5e world and confirm the import prompt. The map will appear in **Scenes** and the two NPC types in **Actors**.
+Foundry Setup → Add-on Modules → Install Module → Manifest URL. Enable the module in a D&D 5e world and confirm the import prompt. The map will appear in **Scenes** and the NPC types, including Oswald, in **Actors**.
 
 **Manually:** Download `dist/library-thousandfold.zip` or the downloadable ZIP linked from ChatGPT. Extract all ZIP contents into `Data/modules/library-thousandfold/` (the `module.json` file should be at `Data/modules/library-thousandfold/module.json`). Restart Foundry and enable the module.
 
@@ -28,9 +29,11 @@ As GM in the Foundry browser console (F12):
 
 ```js
 await LibraryThousandfold.importContent()
+// Or add only Oswald after upgrading:
+await LibraryThousandfold.importOswald()
 ```
 
-The importer checks tagged scene and actors to avoid duplicate imports. It does **not** overwrite edits you've made to existing imported documents. Delete tagged documents before re-importing only if you intentionally want fresh defaults.
+The importer checks tagged scene and actors to avoid duplicate imports. On upgrades from v1.0.0, the GM is separately prompted to add Oswald without recreating existing NPCs or the gate scene. It does **not** overwrite edits you've made to existing imported documents. Delete tagged documents before re-importing only if you intentionally want fresh defaults.
 
 ## Scene notes
 
@@ -43,3 +46,7 @@ Four tokens are preplaced: two Scholar Guards at the stairs and two Librarians n
 ## Source
 
 The art was created specifically for this campaign. No external art downloads are needed after module installation.
+
+## Oswald Pendlewick (GM reference)
+
+Oswald has a complete D&D 5e NPC template at `data/actors/oswald-pendlewick.json`, artwork at `assets/portraits/oswald-pendlewick.webp`, and a portrait-ring token at `assets/tokens/oswald-pendlewick.webp`. His time powers are custom rules for the GM to adjudicate, not an automated Foundry time-rewind engine. The CR 5 tuning is provisional and should be adjusted for the party. To keep the surprise, he is not prepositioned on the gate scene.
