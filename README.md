@@ -1,52 +1,52 @@
-# Library of the Thousandfold — Grand Gate
+# Library of the Thousandfold — FoundryVTT Module (v1.2.0)
 
-A ready-to-import Foundry Virtual Tabletop **D&D 5e** scene and NPC pack for a great library entrance.
+Contains **two** linked campaign locations: the previously created **Grand Gate** entrance and the new **Grand Library — First Floor** (3072×2048 WebP). Existing actor art and Oswald Pendlewick are preserved.
 
-## Contents
+## What is new in v1.2.0
 
-- `Grand Gate` battlemap (2048×2048 WebP, 5-ft grid, 85-px squares / approx. 24×24)
-- Scene with mapped walls, **two separately openable gate doors**, ambient light and preplaced NPC tokens
-- `Scholar Guard` (CR 1, AC 16, HP 27) with a halberd attack, portraits and token art
-- `Grand Library Librarian` (CR 1/8, AC 11, HP 13) with a letter-opener attack, portrait and token art
-- **Oswald Pendlewick** (CR 5 suggested miniboss) with original portrait and hourglass token, Chronal Pulse attack, time-based features, and secret time-artifact lore (GM-only). He is **not** placed on the gate scene by default.
-- An importer that creates the scene and NPCs in the world on GM confirmation
+- A first-floor interior scene based on the approved library illustration with a **5-ft square grid** (128 px), walls around every room, configured door controls and a large playable book hall.
+- Staff and secure routes: **Restricted Archives → Mail Room only**; **Artifact Vault → Security Room only**; **Portal Chamber → Head Librarian’s Office only**. The Head Librarian’s Office has a second door to the Grand Hall. No stairs/elevator or second floor.
+- Freestanding bookshelves block vision/movement as physical objects. Torch lighting and a magical portal glow are preconfigured. The interior scene includes 10 preplaced tokens (from 7 existing/new NPC actor templates), including Oswald as a seemingly ordinary scholar.
+- Four new actor types: Thousandfold Mail Clerk, Book Conservator, Head Librarian, and Artifact Vault Warden. Reuses the original guard/librarian artwork rather than inventing separate portraits.
+- Upgrade-safe importer detects the previous gate/Oswald documents by source flags, then offers the **new interior scene and staff** without overwriting your edits.
 
-## Install in Foundry
+## Install / update
 
-**From manifest URL (recommended after publication):**
+Paste the [module manifest](https://raw.githubusercontent.com/nathan135790/LibraryThousandfold/main/module.json) into Foundry Setup → Add-on Modules → Install Module; then enable the module in your D&D 5e world.
 
-```
-https://raw.githubusercontent.com/nathan135790/LibraryThousandfold/main/module.json
-```
-
-Foundry Setup → Add-on Modules → Install Module → Manifest URL. Enable the module in a D&D 5e world and confirm the import prompt. The map will appear in **Scenes** and the NPC types, including Oswald, in **Actors**.
-
-**Manually:** Download `dist/library-thousandfold.zip` or the downloadable ZIP linked from ChatGPT. Extract all ZIP contents into `Data/modules/library-thousandfold/` (the `module.json` file should be at `Data/modules/library-thousandfold/module.json`). Restart Foundry and enable the module.
-
-## Re-import without overwriting
-
-As GM in the Foundry browser console (F12):
+When you load a world as GM, accept the import prompt. If you declined the prompt, open the GM browser console and run:
 
 ```js
-await LibraryThousandfold.importContent()
-// Or add only Oswald after upgrading:
-await LibraryThousandfold.importOswald()
+await LibraryThousandfold.importInterior()
 ```
 
-The importer checks tagged scene and actors to avoid duplicate imports. On upgrades from v1.0.0, the GM is separately prompted to add Oswald without recreating existing NPCs or the gate scene. It does **not** overwrite edits you've made to existing imported documents. Delete tagged documents before re-importing only if you intentionally want fresh defaults.
+You may also import everything using `await LibraryThousandfold.importContent()` or add Oswald alone with `await LibraryThousandfold.importOswald()`.
 
-## Scene notes
+Manual install: Extract the *contents* of `dist/library-thousandfold.zip` into `Data/modules/library-thousandfold/` so `module.json` sits at the module root. Restart Foundry and enable it.
 
-Two halves of the monumental gate are configured as **doors** in the Foundry wall layer. Double-click or interact with each door control in the scene to open it. The walkable forecourt includes a short stair approach, planters and flanking pools. You can fine-tune individual wall segments in Foundry's Wall Controls for your preferred movement behavior.
+## Scene/room guide
 
-Four tokens are preplaced: two Scholar Guards at the stairs and two Librarians near the gate. Guard and librarian sheets contain starting stats, rollable weapon activities and roleplay hooks. Rebalance for your party level if necessary.
+| Room | How to reach it |
+| --- | --- |
+| Grand Library Hall | Main front double doors |
+| Reception Desk | One entrance from the hall on its eastern wall |
+| Restoration Workshop | One entrance from the hall; **no** archive access |
+| Quiet Studies 1, 2, 3 | One entrance each from the hall |
+| Mail Room | Door from hall; branch to Restricted Archives and Security |
+| Restricted Archives | **Only** through the locked door to the Mail Room |
+| Security Room | Through Mail Room; maintains the locked Artifact Vault door |
+| Artifact Vault | **Only** through the Security Room |
+| Head Librarian's Office | One door to the Hall, one visible door to the Portal Chamber |
+| Portal Chamber | **Only** through the Head Librarian's Office |
 
-**Compatibility target:** Foundry v13 / D&D5e v4–6, with v12 support expected but not runtime-tested. The module contains no external module dependencies.
+## GM notes
 
-## Source
+These doors are modeled as Foundry wall-door segments, not animated artwork. Locked restricted/vault doors require the GM to unlock them using wall controls. Lighting is provided by the scene and the portal glows blue/purple. **No teleportation automation or encounter scripting** is included; configure the portal's destination when you create that scene.
 
-The art was created specifically for this campaign. No external art downloads are needed after module installation.
+The illustration contains room-name lettering, so you can see which room is which while GMing. Oswald's actor sheet includes **GM-only time-artifact spoilers**: restrict access to his sheet if your players shouldn't know his abilities.
 
-## Oswald Pendlewick (GM reference)
+**Compatibility target:** Foundry V13 and D&D 5e (v4–6). Not runtime-tested inside Foundry; walls/door positions may be adjusted via wall controls.
 
-Oswald has a complete D&D 5e NPC template at `data/actors/oswald-pendlewick.json`, artwork at `assets/portraits/oswald-pendlewick.webp`, and a portrait-ring token at `assets/tokens/oswald-pendlewick.webp`. His time powers are custom rules for the GM to adjudicate, not an automated Foundry time-rewind engine. The CR 5 tuning is provisional and should be adjusted for the party. To keep the surprise, he is not prepositioned on the gate scene.
+## Automatic ZIP build
+
+Changes to module source pushed to the `main` branch trigger `.github/workflows/build-module.yml`, which packages all module files into `dist/library-thousandfold.zip` and publishes a workflow artifact.

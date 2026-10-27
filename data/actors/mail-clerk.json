@@ -1,0 +1,227 @@
+{
+  "name": "Thousandfold Mail Clerk",
+  "type": "npc",
+  "img": "modules/library-thousandfold/assets/portraits/librarian.webp",
+  "prototypeToken": {
+    "name": "Thousandfold Mail Clerk",
+    "texture": {
+      "src": "modules/library-thousandfold/assets/tokens/librarian.webp",
+      "scaleX": 1,
+      "scaleY": 1
+    },
+    "width": 1,
+    "height": 1,
+    "alpha": 1,
+    "displayName": 20,
+    "displayBars": 20,
+    "disposition": 0,
+    "bar1": {
+      "attribute": "attributes.hp"
+    },
+    "actorLink": false
+  },
+  "system": {
+    "abilities": {
+      "str": {
+        "value": 9
+      },
+      "dex": {
+        "value": 12
+      },
+      "con": {
+        "value": 11
+      },
+      "int": {
+        "value": 15
+      },
+      "wis": {
+        "value": 14
+      },
+      "cha": {
+        "value": 12
+      }
+    },
+    "skills": {
+      "arc": {
+        "value": 1
+      },
+      "his": {
+        "value": 1
+      },
+      "inv": {
+        "value": 1
+      },
+      "prc": {
+        "value": 1
+      }
+    },
+    "attributes": {
+      "ac": {
+        "calc": "flat",
+        "flat": 11
+      },
+      "hp": {
+        "value": 11,
+        "max": 11,
+        "temp": 0,
+        "tempmax": 0
+      },
+      "movement": {
+        "walk": 30,
+        "units": "ft"
+      }
+    },
+    "details": {
+      "alignment": "lawful neutral",
+      "cr": 0.125,
+      "type": {
+        "value": "humanoid",
+        "subtype": "library staff"
+      },
+      "biography": {
+        "value": "<h2>Thousandfold Mail Clerk</h2><p>Sorts magical correspondence, book loans and sealed institutional dispatches. Only mail staff are routinely authorized to open the Restricted Archives.</p><p><strong>Roleplay:</strong> Efficient, suspicious of unscheduled visitors; recognizes the seals on restricted archive requests.</p>"
+      }
+    },
+    "traits": {
+      "size": "med",
+      "languages": {
+        "value": [
+          "common"
+        ]
+      }
+    }
+  },
+  "items": [
+    {
+      "name": "Letter Opener",
+      "type": "weapon",
+      "img": "icons/weapons/polearms/halberd-crescent-gold.webp",
+      "system": {
+        "description": {
+          "value": "<p>Melee weapon attack: +3 to hit, reach 5 ft., 1d4+1 piercing.</p>"
+        },
+        "identifier": "letter-opener",
+        "type": {
+          "value": "martialM",
+          "baseItem": ""
+        },
+        "equipped": true,
+        "proficient": 1,
+        "damage": {
+          "base": {
+            "number": 1,
+            "denomination": 4,
+            "bonus": "@mod",
+            "types": [
+              "piercing"
+            ],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          },
+          "versatile": null
+        },
+        "activities": {
+          "libraryAttack01": {
+            "type": "attack",
+            "name": "Letter Opener",
+            "activation": {
+              "type": "action",
+              "cost": 1,
+              "condition": ""
+            },
+            "attack": {
+              "ability": "dex",
+              "bonus": "",
+              "flat": false,
+              "type": {
+                "value": "mwak",
+                "classification": "weapon"
+              }
+            },
+            "damage": {
+              "includeBase": true,
+              "parts": []
+            },
+            "range": {
+              "value": 5,
+              "long": null,
+              "units": "ft"
+            },
+            "target": {
+              "template": {
+                "type": "",
+                "size": "",
+                "width": "",
+                "units": ""
+              },
+              "affects": {
+                "type": "creature",
+                "count": "1"
+              },
+              "prompt": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            }
+          }
+        }
+      }
+    },
+    {
+      "name": "Index of the Thousandfold",
+      "type": "feat",
+      "img": "icons/sundries/books/book-symbol-gold-brown.webp",
+      "system": {
+        "description": {
+          "value": "<p>Advantage on Intelligence (History) and (Investigation) checks concerning the library catalogue or historical manuscripts.</p>"
+        },
+        "type": {
+          "value": "monster"
+        },
+        "activities": {}
+      }
+    },
+    {
+      "name": "Summon the Watch",
+      "type": "feat",
+      "img": "icons/sundries/books/book-symbol-gold-brown.webp",
+      "system": {
+        "description": {
+          "value": "<p>As an action, activate a hidden bell or call for a nearby scholar guard, if a guard can hear or receive the alert.</p>"
+        },
+        "type": {
+          "value": "monster"
+        },
+        "activities": {}
+      }
+    },
+    {
+      "name": "Routing Ledger",
+      "type": "feat",
+      "img": "icons/sundries/books/book-symbol-gold-brown.webp",
+      "system": {
+        "description": {
+          "value": "<p>Can identify the intended recipient of any library parcel and the official destination of documents in the Restricted Archives.</p>"
+        },
+        "type": {
+          "value": "monster"
+        },
+        "activities": {}
+      }
+    }
+  ],
+  "effects": [],
+  "flags": {
+    "library-thousandfold": {
+      "source": "thousandfold-mail-clerk"
+    }
+  }
+}

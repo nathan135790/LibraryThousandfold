@@ -2,86 +2,121 @@ const MODULE = "library-thousandfold";
 const DATA = `modules/${MODULE}/data`;
 
 Hooks.once("init", () => {
-  game.settings.register(MODULE, "contentImported", {
-    name: "Library content imported",
-    hint: "Whether the entrance and original NPCs have been imported into this world.",
-    scope: "world", config: false, type: Boolean, default: false
-  });
-  game.settings.register(MODULE, "oswaldImported", {
-    name: "Oswald imported",
-    hint: "Tracks the Oswald Pendlewick addition independently so existing worlds can import him after upgrading.",
-    scope: "world", config: false, type: Boolean, default: false
-  });
+  for (const [key, name, hint] of [
+    ["contentImported", "Gate content imported", "Tracks the original entrance scene and NPCs."],
+    ["oswaldImported", "Oswald imported", "Tracks the time scholar."],
+    ["interiorImported", "Library interior imported", "Tracks the first-floor scene and its staff actors."]
+  ]) game.settings.register(MODULE, key, {name, hint, scope: "world", config: false, type: Boolean, default: false});
 });
 
 async function loadJson(path) {
-  const r = await fetch(`${DATA}/${path}`);
-  if (!r.ok) throw new Error(`Cannot load ${path}: HTTP ${r.status}`);
-  return r.json();
+  const response = await fetch(`${DATA}/${path}`);
+  if (!response.ok) throw new Error(`Could not load ${path} (HTTP ${response.status})`);
+  return response.json();
 }
-
 const hasSource = (doc, source) => doc.getFlag(MODULE, "source") === source;
+const requireGm = () => {
+  if (!game.user?.isGM) throw new Error("Only the GM may import this module's content.");
+  if (game.system.id !== "dnd5e") throw new Error("This module requires the D&D 5e system.");
+};
 
-async function ensureActor(file) {
-  const data = await loadJson(`actors/${file}`);
+async function ensureActor(filename) {
+  const data = await loadJson(`actors/${filename}`);
   const source = data.flags?.[MODULE]?.source;
-  if (!source) throw new Error(`Missing source flag in ${file}`);
-  return game.actors.find(a => hasSource(a, source)) || Actor.create(data);
+  if (!source) throw new Error(`Missing library-thousandfold source flag in ${filename}`);
+  return game.actors.find(actor => hasSource(actor, source)) ?? await Actor.create(data);
 }
-
+function makeToken(actor, x, y) {
+  const token = actor.prototypeToken.toObject();
+  delete token._id;
+  return { ...token, x, y, actorId: actor.id, actorLink: false,
+    name: actor.name, disposition: 0,
+    texture: {...token.texture, src: actor.prototypeToken.texture.src} };
+}
 async function importOswald() {
-  if (!game.user?.isGM) throw new Error("Only the GM may import Library content.");
-  if (game.system.id !== "dnd5e") throw new Error("This actor requires the D&D 5e system.");
-  const oswald = await ensureActor("oswald-pendlewick.json");
+  requireGm();
+  const actor = await ensureActor("oswald-pendlewick.json");
   await game.settings.set(MODULE, "oswaldImported", true);
-  ui.notifications.info("Library of the Thousandfold: Oswald Pendlewick is in the Actors directory.");
-  return oswald;
+  ui.notifications.info("Thousandfold: Oswald Pendlewick is available in Actors.");
+  return actor;
 }
-
-async function importContent() {
-  if (!game.user?.isGM) throw new Error("Only the GM may import Library content.");
-  if (game.system.id !== "dnd5e") throw new Error("This actor pack requires the D&D 5e system.");
-  const guard = await ensureActor("scholar-guard.json");
-  const librarian = await ensureActor("librarian.json");
-  let scene = game.scenes.find(x => hasSource(x, "grand-gate"));
+async function importInterior() {
+  requireGm();
+  const [librarian, guard, clerk, conservator, head, warden, oswald] = await Promise.all([
+    ensureActor("librarian.json"),
+    ensureActor("scholar-guard.json"),
+    ensureActor("mail-clerk.json"),
+    ensureActor("restoration-conservator.json"),
+    ensureActor("head-librarian.json"),
+    ensureActor("vault-warden.json"),
+    ensureActor("oswald-pendlewick.json")
+  ]);
+  let scene = game.scenes.find(scene => hasSource(scene, "grand-library-first-floor"));
   if (!scene) {
-    const sceneData = await loadJson("scenes/grand-gate.json");
+    const sceneData = await loadJson("scenes/grand-library-first-floor.json");
+    // Coordinates are expressed in the 3072 × 2048 scene resolution.
+    // Do not station Oswald in the office or vault: he blends into the public stacks.
     const tokenPlan = [
-      [guard, 675, 965], [guard, 1250, 965],
-      [librarian, 850, 645], [librarian, 1170, 645]
+      [guard, 1420, 1690], [guard, 1980, 1680],        // Entry / hall watch
+      [librarian, 1250, 990], [librarian, 255, 960], // Central stacks / Quiet Study 1
+      [librarian, 360, 1650],                        // Reception
+      [clerk, 1360, 210],                           // Mail Room
+      [conservator, 205, 590],                       // Restoration Workshop
+      [head, 2815, 595],                            // Head Librarian's Office
+      [warden, 2030, 235],                          // Security Room (outside vault)
+      [oswald, 1470, 1130]                           // Inconspicuous scholar near stacks
     ];
-    const tokens = tokenPlan.map(([actor, x, y]) => {
-      const proto = actor.prototypeToken.toObject();
-      delete proto._id;
-      return {...proto, x, y, actorId: actor.id, actorLink: false,
-        name: actor.name, disposition: 0,
-        texture: {...proto.texture, src: actor.prototypeToken.texture.src}};
-    });
-    scene = await Scene.create({...sceneData, tokens});
+    scene = await Scene.create({ ...sceneData,
+      tokens: tokenPlan.map(([actor, x, y]) => makeToken(actor, x, y)) });
   }
-  await importOswald(); // Add to Actors only; he is not preplaced on the gate scene.
-  await game.settings.set(MODULE, "contentImported", true);
-  ui.notifications.info("Library of the Thousandfold: entrance scene and all NPCs are ready.");
+  await game.settings.set(MODULE, "interiorImported", true);
+  ui.notifications.info("Thousandfold: the first-floor library scene and staff are available.");
   return scene;
 }
+async function importContent() {
+  requireGm();
+  const [guard, librarian] = await Promise.all([
+    ensureActor("scholar-guard.json"), ensureActor("librarian.json")
+  ]);
+  let gate = game.scenes.find(scene => hasSource(scene, "grand-gate"));
+  if (!gate) {
+    const sceneData = await loadJson("scenes/grand-gate.json");
+    gate = await Scene.create({ ...sceneData, tokens: [
+      [guard, 675, 965], [guard, 1250, 965],
+      [librarian, 850, 645], [librarian, 1170, 645]
+    ].map(([actor,x,y]) => makeToken(actor,x,y)) });
+  }
+  await game.settings.set(MODULE, "contentImported", true);
+  await importOswald();
+  await importInterior();
+  return gate;
+}
 
-globalThis.LibraryThousandfold = {importContent, importOswald};
+globalThis.LibraryThousandfold = {importContent, importOswald, importInterior};
 
 Hooks.once("ready", async () => {
   if (!game.user?.isGM || game.system.id !== "dnd5e") return;
-  const previouslyImported = game.settings.get(MODULE, "contentImported");
-  const oswaldExists = game.actors.some(x => hasSource(x, "oswald-pendlewick"));
-  if (previouslyImported && (game.settings.get(MODULE, "oswaldImported") || oswaldExists)) return;
-
-  const additionOnly = previouslyImported;
-  const yes = await Dialog.confirm({
-    title: "Library of the Thousandfold",
-    content: additionOnly
-      ? `<p>Add <strong>Oswald Pendlewick</strong>, the Time Scholar, to Actors?</p><p>Your existing scene and actors will not be overwritten or replaced.</p>`
-      : `<p>Import the <strong>Grand Gate</strong> scene, Scholar Guards, Librarians and <strong>Oswald Pendlewick</strong>?</p><p>Oswald will be in Actors but will not be placed on the scene. Your existing documents will not be overwritten.</p>`,
-    yes: () => true, no: () => false, defaultYes: true
-  });
-  if (!yes) return;
-  try { await (additionOnly ? importOswald() : importContent()); }
-  catch (e) { console.error(`${MODULE} import failed`, e); ui.notifications.error(`Library import failed: ${e.message}`); }
+  const hasGate = game.settings.get(MODULE, "contentImported") ||
+    game.scenes.some(scene => hasSource(scene, "grand-gate"));
+  const hasOswald = game.settings.get(MODULE, "oswaldImported") ||
+    game.actors.some(actor => hasSource(actor, "oswald-pendlewick"));
+  const hasInterior = game.settings.get(MODULE, "interiorImported") ||
+    game.scenes.some(scene => hasSource(scene, "grand-library-first-floor"));
+  if (hasGate && hasOswald && hasInterior) return;
+  const prompt = hasGate
+    ? `<p>Import the new <strong>Grand Library — First Floor</strong> scene, staff, and any missing Oswald actor?</p><p>Your existing gate scene and actor edits will be preserved.</p>`
+    : `<p>Import both the <strong>Grand Gate</strong> and <strong>Grand Library — First Floor</strong> scenes, together with Scholar Guards, librarians, staff and Oswald Pendlewick?</p><p>Existing imported documents will not be overwritten.</p>`;
+  const accepted = await Dialog.confirm({title:"Library of the Thousandfold",content:prompt,
+    yes: () => true, no: () => false, defaultYes: true});
+  if (!accepted) return;
+  try {
+    if (!hasGate) await importContent();
+    else {
+      if (!hasOswald) await importOswald();
+      if (!hasInterior) await importInterior();
+    }
+  } catch (error) {
+    console.error(`${MODULE}: import failed`,error);
+    ui.notifications.error(`Library import failed: ${error.message}`);
+  }
 });

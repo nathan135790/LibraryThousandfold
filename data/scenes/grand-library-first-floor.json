@@ -1,0 +1,2273 @@
+{
+  "name": "Library of the Thousandfold \u2014 Grand Library (First Floor)",
+  "navigation": true,
+  "navName": "Thousandfold \u2022 First Floor",
+  "background": {
+    "src": "modules/library-thousandfold/assets/maps/grand-library-first-floor.webp",
+    "offsetX": 0,
+    "offsetY": 0
+  },
+  "width": 3072,
+  "height": 2048,
+  "padding": 0,
+  "grid": {
+    "type": 1,
+    "size": 128,
+    "distance": 5,
+    "units": "ft",
+    "alpha": 0.12,
+    "color": "#191714"
+  },
+  "tokenVision": true,
+  "fogExploration": true,
+  "globalLight": true,
+  "environment": {
+    "darknessLevel": 0
+  },
+  "walls": [
+    {
+      "c": [
+        40,
+        34,
+        3036,
+        34
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        40,
+        34,
+        40,
+        428
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        3036,
+        34,
+        3036,
+        1878
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        896,
+        34,
+        896,
+        224
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        896,
+        224,
+        896,
+        328
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 2,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Restricted Archives / Mail Room \u2014 locked"
+        }
+      }
+    },
+    {
+      "c": [
+        896,
+        328,
+        896,
+        436
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        1674,
+        34,
+        1674,
+        216
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        1674,
+        216,
+        1674,
+        324
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Mail Room / Security Room"
+        }
+      }
+    },
+    {
+      "c": [
+        1674,
+        324,
+        1674,
+        436
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2346,
+        34,
+        2346,
+        218
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2346,
+        218,
+        2346,
+        330
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 2,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Security Room / Artifact Vault \u2014 locked"
+        }
+      }
+    },
+    {
+      "c": [
+        2346,
+        330,
+        2346,
+        436
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        40,
+        436,
+        1510,
+        436
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        1510,
+        436,
+        1600,
+        436
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Grand Hall / Mail Room"
+        }
+      }
+    },
+    {
+      "c": [
+        1600,
+        436,
+        3036,
+        436
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        40,
+        472,
+        736,
+        472
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        40,
+        428,
+        40,
+        1882
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        746,
+        472,
+        746,
+        612
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        746,
+        612,
+        746,
+        714
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Hall / Restoration Workshop"
+        }
+      }
+    },
+    {
+      "c": [
+        746,
+        714,
+        746,
+        828
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        40,
+        828,
+        746,
+        828
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        40,
+        862,
+        604,
+        862
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        610,
+        862,
+        610,
+        978
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        610,
+        978,
+        610,
+        1086
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Hall / Quiet Study 1"
+        }
+      }
+    },
+    {
+      "c": [
+        610,
+        1086,
+        610,
+        1180
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        40,
+        1176,
+        610,
+        1176
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        40,
+        1208,
+        610,
+        1208
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        610,
+        1208,
+        610,
+        1258
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        610,
+        1258,
+        610,
+        1358
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Hall / Quiet Study 2"
+        }
+      }
+    },
+    {
+      "c": [
+        610,
+        1358,
+        610,
+        1490
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        40,
+        1496,
+        766,
+        1496
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        40,
+        1540,
+        894,
+        1540
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        896,
+        1540,
+        896,
+        1602
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        896,
+        1602,
+        896,
+        1714
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Hall / Reception Desk"
+        }
+      }
+    },
+    {
+      "c": [
+        896,
+        1714,
+        896,
+        1880
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        40,
+        1880,
+        896,
+        1880
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2372,
+        472,
+        3036,
+        472
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2374,
+        472,
+        2374,
+        644
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2374,
+        644,
+        2374,
+        764
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Grand Hall / Head Librarian Office"
+        }
+      }
+    },
+    {
+      "c": [
+        2374,
+        764,
+        2374,
+        994
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2374,
+        994,
+        2608,
+        994
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2608,
+        994,
+        2710,
+        994
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Head Librarian Office / Portal Chamber"
+        }
+      }
+    },
+    {
+      "c": [
+        2710,
+        994,
+        3036,
+        994
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2374,
+        994,
+        2374,
+        1504
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2374,
+        1504,
+        3036,
+        1504
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2310,
+        1548,
+        3036,
+        1548
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2310,
+        1548,
+        2310,
+        1622
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2310,
+        1622,
+        2310,
+        1728
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Hall / Quiet Study 3"
+        }
+      }
+    },
+    {
+      "c": [
+        2310,
+        1728,
+        2310,
+        1880
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2310,
+        1880,
+        3036,
+        1880
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        900,
+        1824,
+        1400,
+        1824
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        1400,
+        1824,
+        1540,
+        1824
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Main entrance \u2014 west gate leaf"
+        }
+      }
+    },
+    {
+      "c": [
+        1540,
+        1824,
+        1690,
+        1824
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Main entrance \u2014 east gate leaf"
+        }
+      }
+    },
+    {
+      "c": [
+        1690,
+        1824,
+        2192,
+        1824
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        900,
+        1824,
+        900,
+        1880
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2192,
+        1824,
+        2192,
+        1880
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        952,
+        706,
+        1344,
+        706
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 1"
+        }
+      }
+    },
+    {
+      "c": [
+        1344,
+        706,
+        1344,
+        848
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 1"
+        }
+      }
+    },
+    {
+      "c": [
+        1344,
+        848,
+        952,
+        848
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 1"
+        }
+      }
+    },
+    {
+      "c": [
+        952,
+        848,
+        952,
+        706
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 1"
+        }
+      }
+    },
+    {
+      "c": [
+        1760,
+        710,
+        2148,
+        710
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 2"
+        }
+      }
+    },
+    {
+      "c": [
+        2148,
+        710,
+        2148,
+        850
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 2"
+        }
+      }
+    },
+    {
+      "c": [
+        2148,
+        850,
+        1760,
+        850
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 2"
+        }
+      }
+    },
+    {
+      "c": [
+        1760,
+        850,
+        1760,
+        710
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 2"
+        }
+      }
+    },
+    {
+      "c": [
+        888,
+        930,
+        956,
+        930
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 3"
+        }
+      }
+    },
+    {
+      "c": [
+        956,
+        930,
+        956,
+        1268
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 3"
+        }
+      }
+    },
+    {
+      "c": [
+        956,
+        1268,
+        888,
+        1268
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 3"
+        }
+      }
+    },
+    {
+      "c": [
+        888,
+        1268,
+        888,
+        930
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 3"
+        }
+      }
+    },
+    {
+      "c": [
+        2176,
+        902,
+        2254,
+        902
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 4"
+        }
+      }
+    },
+    {
+      "c": [
+        2254,
+        902,
+        2254,
+        1268
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 4"
+        }
+      }
+    },
+    {
+      "c": [
+        2254,
+        1268,
+        2176,
+        1268
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 4"
+        }
+      }
+    },
+    {
+      "c": [
+        2176,
+        1268,
+        2176,
+        902
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 4"
+        }
+      }
+    },
+    {
+      "c": [
+        1034,
+        1162,
+        1316,
+        1162
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 5"
+        }
+      }
+    },
+    {
+      "c": [
+        1316,
+        1162,
+        1316,
+        1274
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 5"
+        }
+      }
+    },
+    {
+      "c": [
+        1316,
+        1274,
+        1034,
+        1274
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 5"
+        }
+      }
+    },
+    {
+      "c": [
+        1034,
+        1274,
+        1034,
+        1162
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 5"
+        }
+      }
+    },
+    {
+      "c": [
+        1762,
+        1158,
+        2090,
+        1158
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 6"
+        }
+      }
+    },
+    {
+      "c": [
+        2090,
+        1158,
+        2090,
+        1282
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 6"
+        }
+      }
+    },
+    {
+      "c": [
+        2090,
+        1282,
+        1762,
+        1282
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 6"
+        }
+      }
+    },
+    {
+      "c": [
+        1762,
+        1282,
+        1762,
+        1158
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 6"
+        }
+      }
+    },
+    {
+      "c": [
+        1036,
+        1380,
+        1312,
+        1380
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 7"
+        }
+      }
+    },
+    {
+      "c": [
+        1312,
+        1380,
+        1312,
+        1512
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 7"
+        }
+      }
+    },
+    {
+      "c": [
+        1312,
+        1512,
+        1036,
+        1512
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 7"
+        }
+      }
+    },
+    {
+      "c": [
+        1036,
+        1512,
+        1036,
+        1380
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 7"
+        }
+      }
+    },
+    {
+      "c": [
+        1776,
+        1382,
+        2092,
+        1382
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 8"
+        }
+      }
+    },
+    {
+      "c": [
+        2092,
+        1382,
+        2092,
+        1502
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 8"
+        }
+      }
+    },
+    {
+      "c": [
+        2092,
+        1502,
+        1776,
+        1502
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 8"
+        }
+      }
+    },
+    {
+      "c": [
+        1776,
+        1502,
+        1776,
+        1382
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 8"
+        }
+      }
+    },
+    {
+      "c": [
+        1036,
+        488,
+        1314,
+        488
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 9"
+        }
+      }
+    },
+    {
+      "c": [
+        1314,
+        488,
+        1314,
+        584
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 9"
+        }
+      }
+    },
+    {
+      "c": [
+        1314,
+        584,
+        1036,
+        584
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 9"
+        }
+      }
+    },
+    {
+      "c": [
+        1036,
+        584,
+        1036,
+        488
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 9"
+        }
+      }
+    },
+    {
+      "c": [
+        1792,
+        484,
+        2086,
+        484
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 10"
+        }
+      }
+    },
+    {
+      "c": [
+        2086,
+        484,
+        2086,
+        586
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 10"
+        }
+      }
+    },
+    {
+      "c": [
+        2086,
+        586,
+        1792,
+        586
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 10"
+        }
+      }
+    },
+    {
+      "c": [
+        1792,
+        586,
+        1792,
+        484
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Bookcase 10"
+        }
+      }
+    }
+  ],
+  "lights": [
+    {
+      "x": 930,
+      "y": 622,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 2098,
+      "y": 640,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 1380,
+      "y": 936,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 1728,
+      "y": 930,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 1396,
+      "y": 1330,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 1722,
+      "y": 1322,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 1360,
+      "y": 1682,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 1734,
+      "y": 1682,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 470,
+      "y": 976,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 512,
+      "y": 1322,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 410,
+      "y": 650,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 1430,
+      "y": 264,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 1958,
+      "y": 254,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 2648,
+      "y": 250,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 2672,
+      "y": 690,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 2568,
+      "y": 1302,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 264,
+      "y": 1670,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 2602,
+      "y": 1678,
+      "hidden": false,
+      "config": {
+        "dim": 24,
+        "bright": 12,
+        "color": "#ffd28b",
+        "alpha": 0.35,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 2722,
+      "y": 1264,
+      "hidden": false,
+      "config": {
+        "dim": 32,
+        "bright": 14,
+        "color": "#7860ef",
+        "alpha": 0.35,
+        "animation": {
+          "type": "pulse",
+          "speed": 2,
+          "intensity": 3
+        }
+      }
+    }
+  ],
+  "tokens": [],
+  "drawings": [],
+  "notes": [],
+  "tiles": [],
+  "sounds": [],
+  "templates": [],
+  "flags": {
+    "library-thousandfold": {
+      "source": "grand-library-first-floor",
+      "roomAccess": {
+        "restrictedArchives": "mail-room-only",
+        "artifactVault": "security-room-only",
+        "portalChamber": "head-librarian-office-only",
+        "headLibrarianOffice": "grand-library-hall-and-portal-chamber"
+      },
+      "description": "A one-floor library with no staircase or elevator. The upper archives, vault, and portal have controlled access."
+    }
+  }
+}
