@@ -36,6 +36,7 @@ function makeToken(actor, x, y) {
 async function importOswald() {
   requireGm();
   const actor = await ensureActor("oswald-pendlewick.json");
+  if (globalThis.LibraryThousandfold?.upgradeOswald) await globalThis.LibraryThousandfold.upgradeOswald(actor);
   await game.settings.set(MODULE, "oswaldImported", true);
   ui.notifications.info("Thousandfold: Oswald Pendlewick is available in Actors.");
   return actor;
@@ -108,6 +109,10 @@ const ITEM_ICONS = {
   "Vault Protocol": "modules/library-thousandfold/assets/icons/vault-protocol.webp",
   "Alarm Bell": "modules/library-thousandfold/assets/icons/alarm-bell.webp",
   "Chronal Pulse": "modules/library-thousandfold/assets/icons/chronal-pulse.webp",
+  "Momentary Pause": "modules/library-thousandfold/assets/icons/momentary-pause.webp",
+  "Stolen Seconds": "modules/library-thousandfold/assets/icons/stolen-seconds.webp",
+  "Rewind the Thread": "modules/library-thousandfold/assets/icons/rewind-the-thread.webp",
+  "Rewind a Blow": "modules/library-thousandfold/assets/icons/rewind-the-thread.webp",
   "Momentary Pause (Recharge 5–6)": "modules/library-thousandfold/assets/icons/momentary-pause.webp",
   "Stolen Seconds (3/Day)": "modules/library-thousandfold/assets/icons/stolen-seconds.webp",
   "Rewind the Thread (1/Day)": "modules/library-thousandfold/assets/icons/rewind-the-thread.webp",

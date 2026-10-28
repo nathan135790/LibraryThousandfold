@@ -26,19 +26,19 @@
         "value": 9
       },
       "dex": {
-        "value": 14
+        "value": 12
       },
       "con": {
         "value": 12
       },
       "int": {
-        "value": 18
+        "value": 16
       },
       "wis": {
-        "value": 15
+        "value": 13
       },
       "cha": {
-        "value": 13
+        "value": 11
       }
     },
     "skills": {
@@ -61,11 +61,11 @@
     "attributes": {
       "ac": {
         "calc": "flat",
-        "flat": 15
+        "flat": 12
       },
       "hp": {
-        "value": 82,
-        "max": 82,
+        "value": 32,
+        "max": 32,
         "temp": 0,
         "tempmax": 0
       },
@@ -76,13 +76,13 @@
     },
     "details": {
       "alignment": "neutral",
-      "cr": 5,
+      "cr": 1,
       "type": {
         "value": "humanoid",
         "subtype": "time scholar"
       },
       "biography": {
-        "value": "<h2>Oswald Pendlewick</h2><p>A mild-mannered, bespectacled archivist with an untidy stack of books and an exquisite brass hourglass. He seems far too distracted to be dangerous. A gentle smile masks a fascination with what happens when choices are undone.</p><h3>GM-only — The Time Scholar</h3><p><strong>Secret:</strong> Oswald possesses an artifact tied to the Avatar of Time. He uses it to stop or rewind events for petty theft and private indulgence, and can decide which small changes remain after otherwise complete rewinds. The artifact is the object Captain Varrin seeks on behalf of Marsh Toreg.</p><p><strong>Portrayal:</strong> He is verbose, fussy and seemingly harmless; he avoids overt aggression. Reveal his true abilities only when forced or when a player notices impossible discrepancies.</p><p><strong>Balance:</strong> The following CR 5 stats are a suggested miniboss template, not a previously established canonical power level. Time effects are descriptive features requiring GM adjudication; Foundry does not automate rewinds.</p><p><strong>Tactics:</strong> Open with deflection and information; if cornered, use Chronal Pulse, Momentary Pause, and Rewind the Thread to escape while keeping the artifact concealed.</p>"
+        "value": "<h2>Oswald Pendlewick — The Borrower of Time</h2><p>Ordinary human archivist, modest spellcaster, nervous and physically fragile. His spectacular time powers come solely from the hidden Hourglass of Unfinished Moments, tied to the Avatar of Time.</p><h3>GM-only: The Price of Time</h3><p>Unlimited artifact uses, but each incurs Temporal Strain. 3+: half walking speed. Reaching 6: disadvantage on attacks/checks and 1d4 years lost. Reaching 9: 1d6 more years lost. Each use at 9+: 2d6 HP loss, Constitution save DC 10 + strain above 9 or unconsciousness; each subsequent use also loses 1d6 years. Long rest recovers 3 strain, never years. Ordinary arcane spells never increase strain.</p><p>Oswald uses rewinds for theft, indulgence and undoing his mistakes; he can anchor chosen small changes. Captain Varrin is after the artifact on Marsh Toreg's behalf. GM resolves effects that change timeline manually. Use the Oswald — Hourglass Controls macro or on-sheet activities.</p>"
       }
     },
     "traits": {
@@ -102,7 +102,7 @@
       "img": "modules/library-thousandfold/assets/icons/chronal-pulse.webp",
       "system": {
         "description": {
-          "value": "<p><strong>Spell Attack:</strong> +7 to hit, range 60 ft, one target. Hit: 2d8 + 4 force damage. The target cannot make reactions until the start of Oswald’s next turn. Treat this as a magical time distortion, not an ordinary physical weapon.</p>"
+          "value": "<p>Artifact time-distortion ranged spell attack +5, 60 ft, 1d8+3 force; hit target loses reactions until Oswald's next turn. Adds 1 strain, no use limit.</p>"
         },
         "identifier": "chronal-pulse",
         "type": {
@@ -113,9 +113,9 @@
         "proficient": 1,
         "damage": {
           "base": {
-            "number": 2,
+            "number": 1,
             "denomination": 8,
-            "bonus": "4",
+            "bonus": "3",
             "types": [
               "force"
             ],
@@ -177,82 +177,115 @@
             }
           }
         }
+      },
+      "flags": {
+        "library-thousandfold": {
+          "temporalPower": "chronal-pulse"
+        }
       }
     },
     {
-      "name": "Momentary Pause (Recharge 5–6)",
+      "name": "Momentary Pause",
       "type": "feat",
       "img": "modules/library-thousandfold/assets/icons/momentary-pause.webp",
       "system": {
         "description": {
-          "value": "<p><strong>Action, recharge 5–6.</strong> Oswald suspends a 15-foot-radius area he can see within 60 feet for a heartbeat. Creatures of his choice in the area make a DC 15 Wisdom saving throw or have speed 0 and cannot take reactions until the end of their next turn. On success there is no effect. This is a custom, GM-resolved ability.</p>"
+          "value": "<p>Action, 2 strain. DC 15 Wisdom save in a 15-foot radius within 60 feet; chosen failures have speed 0 and no reactions until end of their next turn. GM applies results.</p><p><em>Unlimited activation; incurs accumulating strain, aging and exhaustion.</em></p>"
         },
         "type": {
           "value": "monster"
         },
-        "activities": {}
+        "activities": {
+          "momentarypause": {
+            "type": "utility",
+            "name": "Activate Momentary Pause",
+            "activation": {
+              "type": "action",
+              "cost": 1,
+              "condition": ""
+            }
+          }
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        }
       },
       "flags": {
         "library-thousandfold": {
-          "source": "momentary-pause"
+          "source": "momentary-pause",
+          "temporalPower": "momentary-pause"
         }
       }
     },
     {
-      "name": "Stolen Seconds (3/Day)",
+      "name": "Stolen Seconds",
       "type": "feat",
       "img": "modules/library-thousandfold/assets/icons/stolen-seconds.webp",
       "system": {
         "description": {
-          "value": "<p><strong>Bonus Action, 3/day.</strong> Oswald teleports up to 20 feet to an unoccupied space he can see without provoking opportunity attacks. The motion appears as a jump in time.</p>"
+          "value": "<p>Bonus action, 1 strain. Teleport 20 feet without opportunity attacks; GM moves token.</p><p><em>Unlimited activation; incurs accumulating strain, aging and exhaustion.</em></p>"
         },
         "type": {
           "value": "monster"
         },
-        "activities": {},
+        "activities": {
+          "stolenseconds": {
+            "type": "utility",
+            "name": "Activate Stolen Seconds",
+            "activation": {
+              "type": "bonus",
+              "cost": 1,
+              "condition": ""
+            }
+          }
+        },
         "uses": {
           "spent": 0,
-          "max": "3",
-          "recovery": [
-            {
-              "period": "lr",
-              "type": "recoverAll"
-            }
-          ]
+          "max": "",
+          "recovery": []
         }
       },
       "flags": {
         "library-thousandfold": {
-          "source": "stolen-seconds"
+          "source": "stolen-seconds",
+          "temporalPower": "stolen-seconds"
         }
       }
     },
     {
-      "name": "Rewind the Thread (1/Day)",
+      "name": "Rewind the Thread",
       "type": "feat",
       "img": "modules/library-thousandfold/assets/icons/rewind-the-thread.webp",
       "system": {
         "description": {
-          "value": "<p><strong>Reaction, 1/day, when he would drop to 0 HP:</strong> He instead drops to 1 HP, regains 20 HP, and appears in the space he occupied at the start of his last turn (or the nearest unoccupied space). The GM decides what small event or object state, if any, remains altered across this rewind. Do not rewind the entire Foundry combat state automatically.</p>"
+          "value": "<p>Reaction, 4 strain. Undo one significant event from last round. GM decides what small changes remain; never auto-rewind Foundry combat history.</p><p><em>Unlimited activation; incurs accumulating strain, aging and exhaustion.</em></p>"
         },
         "type": {
           "value": "monster"
         },
-        "activities": {},
+        "activities": {
+          "rewindthethread": {
+            "type": "utility",
+            "name": "Activate Rewind the Thread",
+            "activation": {
+              "type": "reaction",
+              "cost": 1,
+              "condition": ""
+            }
+          }
+        },
         "uses": {
           "spent": 0,
-          "max": "1",
-          "recovery": [
-            {
-              "period": "lr",
-              "type": "recoverAll"
-            }
-          ]
+          "max": "",
+          "recovery": []
         }
       },
       "flags": {
         "library-thousandfold": {
-          "source": "rewind-the-thread"
+          "source": "rewind-the-thread",
+          "temporalPower": "rewind-the-thread"
         }
       }
     },
@@ -262,7 +295,7 @@
       "img": "modules/library-thousandfold/assets/icons/hourglass-of-unfinished-moments.webp",
       "system": {
         "description": {
-          "value": "<p><strong>GM-only artifact:</strong> Tied to the Avatar of Time. Out of combat, it can halt or reverse a brief interval; Oswald can anchor selected changes while the surrounding timeline resets. Its ultimate limits and ways to counter it are campaign mysteries, not automatic Foundry mechanics. If stolen, its powers should not automatically transfer to the party unchanged.</p>"
+          "value": "<p>Hidden divine artifact of the Avatar of Time; its powers have no charges but cost mortal vitality, age, and eventually health. Some changes persist across rewinds at wielder's discretion. New wielders do not automatically inherit the same mastery.</p>"
         },
         "type": {
           "value": "monster"
@@ -281,7 +314,7 @@
       "img": "modules/library-thousandfold/assets/icons/appear-harmless.webp",
       "system": {
         "description": {
-          "value": "<p>Oswald poses as an ordinary archivist. His manner, appearance and equipment give no obvious sign of his true threat; detecting time magic or investigating contradictory records may reveal the deception.</p>"
+          "value": "<p>Oswald seems like a mild, slightly awkward human scholar. His ordinary spells are unremarkable; he is dangerous only with his concealed hourglass.</p>"
         },
         "type": {
           "value": "monster"
@@ -293,12 +326,157 @@
           "source": "appear-harmless"
         }
       }
+    },
+    {
+      "name": "Rewind a Blow",
+      "type": "feat",
+      "img": "modules/library-thousandfold/assets/icons/rewind-the-thread.webp",
+      "system": {
+        "description": {
+          "value": "<p>Reaction, 2 strain. Reroll one just-resolved attack roll or saving throw; new result stands. GM adjudicates repercussions.</p>"
+        },
+        "type": {
+          "value": "monster"
+        },
+        "activities": {
+          "rewindablow": {
+            "type": "utility",
+            "name": "Activate Rewind a Blow",
+            "activation": {
+              "type": "reaction",
+              "cost": 1,
+              "condition": ""
+            }
+          }
+        },
+        "uses": {
+          "spent": 0,
+          "max": "",
+          "recovery": []
+        }
+      },
+      "flags": {
+        "library-thousandfold": {
+          "source": "rewind-a-blow",
+          "temporalPower": "rewind-a-blow"
+        }
+      }
+    },
+    {
+      "name": "Arcane Spark",
+      "type": "weapon",
+      "img": "icons/magic/light/beam-deflect-path-yellow.webp",
+      "system": {
+        "description": {
+          "value": "<p>Ordinary magic: ranged spell attack +5, 60 ft, 1d6 force. No Temporal Strain.</p>"
+        },
+        "identifier": "arcane-spark",
+        "type": {
+          "value": "simpleR",
+          "baseItem": ""
+        },
+        "equipped": true,
+        "proficient": 1,
+        "damage": {
+          "base": {
+            "number": 1,
+            "denomination": 6,
+            "bonus": "0",
+            "types": [
+              "force"
+            ],
+            "custom": {
+              "enabled": false,
+              "formula": ""
+            },
+            "scaling": {
+              "mode": "",
+              "number": null,
+              "formula": ""
+            }
+          },
+          "versatile": null
+        },
+        "activities": {
+          "arcaneSpark": {
+            "type": "attack",
+            "name": "Arcane Spark",
+            "activation": {
+              "type": "action",
+              "cost": 1,
+              "condition": ""
+            },
+            "attack": {
+              "ability": "int",
+              "bonus": "",
+              "flat": false,
+              "type": {
+                "value": "rsak",
+                "classification": "spell"
+              }
+            },
+            "damage": {
+              "includeBase": true,
+              "parts": []
+            },
+            "range": {
+              "value": 60,
+              "long": null,
+              "units": "ft"
+            },
+            "target": {
+              "template": {
+                "type": "",
+                "size": "",
+                "width": "",
+                "units": ""
+              },
+              "affects": {
+                "type": "creature",
+                "count": "1"
+              },
+              "prompt": true
+            },
+            "uses": {
+              "spent": 0,
+              "recovery": []
+            }
+          }
+        }
+      },
+      "flags": {
+        "library-thousandfold": {
+          "source": "arcane-spark"
+        }
+      }
+    },
+    {
+      "name": "Ordinary Scholarly Magic",
+      "type": "feat",
+      "img": "modules/library-thousandfold/assets/icons/index-of-the-thousandfold.webp",
+      "system": {
+        "description": {
+          "value": "<p>Oswald knows Mage Hand, Minor Illusion, Prestidigitation, Detect Magic, Shield, and Misty Step. Use normal D&D 5e spell slots and casting rules; none incurs Temporal Strain.</p>"
+        },
+        "type": {
+          "value": "monster"
+        },
+        "activities": {}
+      },
+      "flags": {
+        "library-thousandfold": {
+          "source": "ordinary-scholarly-magic"
+        }
+      }
     }
   ],
   "effects": [],
   "flags": {
     "library-thousandfold": {
-      "source": "oswald-pendlewick"
+      "source": "oswald-pendlewick",
+      "temporalSchemaVersion": 1,
+      "temporalStrain": 0,
+      "yearsLost": 0
     }
   }
 }

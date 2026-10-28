@@ -64,3 +64,41 @@ await LibraryThousandfold.updateItemIcons()
 ```
 
 The icon update changes only actor item artwork, not actor stats, features, scene walls, maps, or tokens.
+
+## Oswald Pendlewick: Temporal Strain (v1.3.0)
+
+Oswald is a **fragile human scholar**, not an innately powerful time wizard (suggested AC 12, 32 HP, CR 1). He can use modest **ordinary** magic, including Arcane Spark, Mage Hand, Minor Illusion, Prestidigitation, Detect Magic, Shield, and Misty Step. Ordinary magic costs **no Temporal Strain**; normal D&D 5e spell rules still apply.
+
+The **Hourglass of Unfinished Moments** has no charges, no daily cap, and no recharge limit. Each use accumulates Temporal Strain on Oswald's actor (via Foundry actor flags). It does not undo other combat history automatically.
+
+| Power | Strain | Activation |
+|---|---:|---|
+| Chronal Pulse | 1 | Action |
+| Stolen Seconds | 1 | Bonus action |
+| Momentary Pause | 2 | Action |
+| Rewind a Blow | 2 | Reaction |
+| Rewind the Thread | 4 | Reaction |
+
+**Effects and life cost:**
+- 0–2 strain: stable.
+- 3–5: half walking speed.
+- 6–8: disadvantage on attacks and checks, immediately permanently lose **1d4 years** upon first crossing 6.
+- 9+: permanently lose **1d6 more years** on first crossing 9; **every use at 9+** inflicts **2d6 HP damage** and a **Constitution save, DC 10 + (current strain − 9)**, or Oswald becomes unconscious. Each later activation, while already at 9+, also loses **1d6 years**.
+- **Long rest** manually recovers 3 strain but **never** returns lost years (and does not clear unconsciousness or heal backlash).
+
+The module tracks current strain, years lost, stage, the automatic movement/roll effects, damage, saving throw, and collapse. It posts the outcome to **GM-only chat**; teleport destinations, targets, roll rerolls, and event rewinds remain **GM adjudicated**.
+
+**Use in Foundry:** A GM macro named **Oswald — Hourglass Controls** is created after module upgrade. Put this macro on your hotbar, select Oswald's token (if one is present), and choose a power or a long rest. You may also use the button from the features' D&D 5e activity controls; supported activity use automatically applies the same strain rules:
+
+```js
+LibraryThousandfold.openOswaldTimePanel()
+await LibraryThousandfold.useOswaldPower("rewind-the-thread")
+await LibraryThousandfold.restOswald()
+await LibraryThousandfold.upgradeOswald()
+```
+
+On first load as GM, the module attempts a **careful one-time Oswald upgrade**. It updates matching default actor stats, replaces outdated per-day features, and adds new abilities. Custom-edited numeric stats are preserved when they no longer match the old template. Back up your world before updating; previously imported unlinked scene tokens may have their own actor deltas. To upgrade a selected synthetic Oswald token, open its GM control panel before use. Other NPCs, maps, walls, and the library scenes are untouched.
+
+**Compatibility:** Designed for Foundry V13, D&D5e v6. The module includes compatibility fallbacks for Foundry V12 / D&D5e v4–5 but precise roll-mode enforcement has not been tested in a live world. No Midi-QOL or other dependency is required.
+
+Developers can run pure rules tests with `node --test tests/temporal-rules.test.mjs`.

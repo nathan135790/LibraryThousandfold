@@ -23,6 +23,15 @@ jobs:
       - name: Check out module sources
         uses: actions/checkout@v4
 
+      - name: Check JavaScript syntax
+        run: |
+          cp scripts/temporal.js /tmp/temporal-controller.mjs
+          node --check /tmp/temporal-controller.mjs
+          node --check scripts/temporal-rules.mjs
+
+      - name: Test Temporal Strain rules
+        run: node --test tests/temporal-rules.test.mjs
+
       - name: Build installable FoundryVTT ZIP
         shell: bash
         run: |
@@ -41,7 +50,7 @@ jobs:
 
           output = root / 'dist' / 'library-thousandfold.zip'
           output.parent.mkdir(parents=True, exist_ok=True)
-          excluded_dirs = {'.git', '.github', 'dist', '__pycache__', '.venv', '.idea', '.vscode'}
+          excluded_dirs = {'.git', '.github', 'dist', 'tests', '__pycache__', '.venv', '.idea', '.vscode'}
           excluded_files = {'.DS_Store', 'Thumbs.db'}
           sources = sorted(
               p for p in root.rglob('*')

@@ -1,8 +1,8 @@
 {
   "id": "library-thousandfold",
   "title": "Library of the Thousandfold — Grand Gate & First Floor",
-  "description": "FoundryVTT scenes for the Grand Gate and first-floor library, with mapped doors, lighting, actors and Oswald Pendlewick.",
-  "version": "1.2.2",
+  "description": "Grand Gate and first-floor scenes, library NPCs, and Oswald Pendlewick's unlimited-use Hourglass with accumulating Temporal Strain, exhaustion and permanent aging.",
+  "version": "1.3.0",
   "authors": [
     {
       "name": "Library of the Thousandfold Campaign"
@@ -21,7 +21,8 @@
     ]
   },
   "esmodules": [
-    "scripts/import.js"
+    "scripts/import.js",
+    "scripts/temporal.js"
   ],
   "url": "https://github.com/nathan135790/LibraryThousandfold",
   "manifest": "https://raw.githubusercontent.com/nathan135790/LibraryThousandfold/main/module.json",
