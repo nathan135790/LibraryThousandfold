@@ -99,7 +99,7 @@
     {
       "name": "Chronal Pulse",
       "type": "weapon",
-      "img": "icons/sundries/books/book-symbol-gold-brown.webp",
+      "img": "modules/library-thousandfold/assets/icons/chronal-pulse.webp",
       "system": {
         "description": {
           "value": "<p><strong>Spell Attack:</strong> +7 to hit, range 60 ft, one target. Hit: 2d8 + 4 force damage. The target cannot make reactions until the start of Oswald’s next turn. Treat this as a magical time distortion, not an ordinary physical weapon.</p>"
@@ -182,7 +182,7 @@
     {
       "name": "Momentary Pause (Recharge 5–6)",
       "type": "feat",
-      "img": "icons/sundries/books/book-symbol-gold-brown.webp",
+      "img": "modules/library-thousandfold/assets/icons/momentary-pause.webp",
       "system": {
         "description": {
           "value": "<p><strong>Action, recharge 5–6.</strong> Oswald suspends a 15-foot-radius area he can see within 60 feet for a heartbeat. Creatures of his choice in the area make a DC 15 Wisdom saving throw or have speed 0 and cannot take reactions until the end of their next turn. On success there is no effect. This is a custom, GM-resolved ability.</p>"
@@ -201,7 +201,7 @@
     {
       "name": "Stolen Seconds (3/Day)",
       "type": "feat",
-      "img": "icons/sundries/books/book-symbol-gold-brown.webp",
+      "img": "modules/library-thousandfold/assets/icons/stolen-seconds.webp",
       "system": {
         "description": {
           "value": "<p><strong>Bonus Action, 3/day.</strong> Oswald teleports up to 20 feet to an unoccupied space he can see without provoking opportunity attacks. The motion appears as a jump in time.</p>"
@@ -230,7 +230,7 @@
     {
       "name": "Rewind the Thread (1/Day)",
       "type": "feat",
-      "img": "icons/sundries/books/book-symbol-gold-brown.webp",
+      "img": "modules/library-thousandfold/assets/icons/rewind-the-thread.webp",
       "system": {
         "description": {
           "value": "<p><strong>Reaction, 1/day, when he would drop to 0 HP:</strong> He instead drops to 1 HP, regains 20 HP, and appears in the space he occupied at the start of his last turn (or the nearest unoccupied space). The GM decides what small event or object state, if any, remains altered across this rewind. Do not rewind the entire Foundry combat state automatically.</p>"
@@ -259,7 +259,7 @@
     {
       "name": "Hourglass of Unfinished Moments",
       "type": "feat",
-      "img": "icons/sundries/books/book-symbol-gold-brown.webp",
+      "img": "modules/library-thousandfold/assets/icons/hourglass-of-unfinished-moments.webp",
       "system": {
         "description": {
           "value": "<p><strong>GM-only artifact:</strong> Tied to the Avatar of Time. Out of combat, it can halt or reverse a brief interval; Oswald can anchor selected changes while the surrounding timeline resets. Its ultimate limits and ways to counter it are campaign mysteries, not automatic Foundry mechanics. If stolen, its powers should not automatically transfer to the party unchanged.</p>"
@@ -278,7 +278,7 @@
     {
       "name": "Appear Harmless",
       "type": "feat",
-      "img": "icons/sundries/books/book-symbol-gold-brown.webp",
+      "img": "modules/library-thousandfold/assets/icons/appear-harmless.webp",
       "system": {
         "description": {
           "value": "<p>Oswald poses as an ordinary archivist. His manner, appearance and equipment give no obvious sign of his true threat; detecting time magic or investigating contradictory records may reveal the deception.</p>"

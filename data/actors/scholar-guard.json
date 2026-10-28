@@ -92,7 +92,7 @@
     {
       "name": "Library Halberd",
       "type": "weapon",
-      "img": "icons/weapons/polearms/halberd-crescent-gold.webp",
+      "img": "modules/library-thousandfold/assets/icons/library-halberd.webp",
       "system": {
         "description": {
           "value": "<p>Melee weapon attack: +4 to hit, reach 10 ft., 1d10+2 slashing.</p>"
@@ -175,7 +175,7 @@
     {
       "name": "Keep the Silence",
       "type": "feat",
-      "img": "icons/sundries/books/book-symbol-gold-brown.webp",
+      "img": "modules/library-thousandfold/assets/icons/keep-the-silence.webp",
       "system": {
         "description": {
           "value": "<p>The guard signals fellow watchkeepers rather than shouting; a resonant bell in the guardhouse alerts the gate within 1 round.</p>"
@@ -189,7 +189,7 @@
     {
       "name": "Nonlethal Training",
       "type": "feat",
-      "img": "icons/sundries/books/book-symbol-gold-brown.webp",
+      "img": "modules/library-thousandfold/assets/icons/nonlethal-training.webp",
       "system": {
         "description": {
           "value": "<p>When reducing a creature to 0 HP with a melee attack, the guard may choose to knock the creature unconscious instead of killing it.</p>"

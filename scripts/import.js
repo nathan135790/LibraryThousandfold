@@ -92,10 +92,59 @@ async function importContent() {
   return gate;
 }
 
-globalThis.LibraryThousandfold = {importContent, importOswald, importInterior};
+
+// Unique illustration for each NPC feature/action. Existing custom item art is preserved.
+const ITEM_ICONS = {
+  "Letter Opener": "modules/library-thousandfold/assets/icons/letter-opener.webp",
+  "Index of the Thousandfold": "modules/library-thousandfold/assets/icons/index-of-the-thousandfold.webp",
+  "Summon the Watch": "modules/library-thousandfold/assets/icons/summon-the-watch.webp",
+  "Master Keys": "modules/library-thousandfold/assets/icons/master-keys.webp",
+  "Portal Custody": "modules/library-thousandfold/assets/icons/portal-custody.webp",
+  "Routing Ledger": "modules/library-thousandfold/assets/icons/routing-ledger.webp",
+  "Preservation Expertise": "modules/library-thousandfold/assets/icons/preservation-expertise.webp",
+  "Library Halberd": "modules/library-thousandfold/assets/icons/library-halberd.webp",
+  "Keep the Silence": "modules/library-thousandfold/assets/icons/keep-the-silence.webp",
+  "Nonlethal Training": "modules/library-thousandfold/assets/icons/nonlethal-training.webp",
+  "Vault Protocol": "modules/library-thousandfold/assets/icons/vault-protocol.webp",
+  "Alarm Bell": "modules/library-thousandfold/assets/icons/alarm-bell.webp",
+  "Chronal Pulse": "modules/library-thousandfold/assets/icons/chronal-pulse.webp",
+  "Momentary Pause (Recharge 5–6)": "modules/library-thousandfold/assets/icons/momentary-pause.webp",
+  "Stolen Seconds (3/Day)": "modules/library-thousandfold/assets/icons/stolen-seconds.webp",
+  "Rewind the Thread (1/Day)": "modules/library-thousandfold/assets/icons/rewind-the-thread.webp",
+  "Hourglass of Unfinished Moments": "modules/library-thousandfold/assets/icons/hourglass-of-unfinished-moments.webp",
+  "Appear Harmless": "modules/library-thousandfold/assets/icons/appear-harmless.webp"
+};
+
+async function updateItemIcons() {
+  if (!game.user?.isGM) throw new Error("Only the GM may update Library item icons.");
+  if (game.system.id !== "dnd5e") return 0;
+  let modified = 0;
+  for (const actor of game.actors) {
+    const source = actor.getFlag(MODULE, "source");
+    if (!source) continue;
+    const changes = [];
+    for (const item of actor.items) {
+      const target = ITEM_ICONS[item.name];
+      if (!target || item.img === target) continue;
+      // Replace only the module's legacy generic icon or a missing icon.
+      if (item.img && !item.img.startsWith("icons/") &&
+          !item.img.startsWith(`modules/${MODULE}/assets/icons/`)) continue;
+      changes.push({_id: item.id, img: target});
+    }
+    if (changes.length) {
+      await actor.updateEmbeddedDocuments("Item", changes);
+      modified += changes.length;
+    }
+  }
+  if (modified) ui.notifications.info(`Library of the Thousandfold: updated ${modified} feature/action icons.`);
+  return modified;
+}
+
+globalThis.LibraryThousandfold = {importContent, importOswald, importInterior, updateItemIcons};
 
 Hooks.once("ready", async () => {
   if (!game.user?.isGM || game.system.id !== "dnd5e") return;
+  try { await updateItemIcons(); } catch (e) { console.warn("Library item icon migration failed", e); }
   const hasGate = game.settings.get(MODULE, "contentImported") ||
     game.scenes.some(scene => hasSource(scene, "grand-gate"));
   const hasOswald = game.settings.get(MODULE, "oswaldImported") ||

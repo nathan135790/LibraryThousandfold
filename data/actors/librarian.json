@@ -95,7 +95,7 @@
     {
       "name": "Letter Opener",
       "type": "weapon",
-      "img": "icons/weapons/polearms/halberd-crescent-gold.webp",
+      "img": "modules/library-thousandfold/assets/icons/letter-opener.webp",
       "system": {
         "description": {
           "value": "<p>Melee weapon attack: +3 to hit, reach 5 ft., 1d4+1 piercing.</p>"
@@ -178,7 +178,7 @@
     {
       "name": "Index of the Thousandfold",
       "type": "feat",
-      "img": "icons/sundries/books/book-symbol-gold-brown.webp",
+      "img": "modules/library-thousandfold/assets/icons/index-of-the-thousandfold.webp",
       "system": {
         "description": {
           "value": "<p>Advantage on Intelligence (History) and (Investigation) checks concerning the library catalogue or historical manuscripts.</p>"
@@ -192,7 +192,7 @@
     {
       "name": "Summon the Watch",
       "type": "feat",
-      "img": "icons/sundries/books/book-symbol-gold-brown.webp",
+      "img": "modules/library-thousandfold/assets/icons/summon-the-watch.webp",
       "system": {
         "description": {
           "value": "<p>As an action, activate a hidden bell or call for a nearby scholar guard, if a guard can hear or receive the alert.</p>"

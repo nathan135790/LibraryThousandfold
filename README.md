@@ -50,6 +50,17 @@ The illustration contains room-name lettering, so you can see which room is whic
 ## Automatic ZIP build
 
 Changes to module source pushed to the `main` branch trigger `.github/workflows/build-module.yml`, which packages all module files into `dist/library-thousandfold.zip` and publishes a workflow artifact.
-## Version 1.2.1 — Unlabeled first-floor map
 
-Removed room titles and the main entrance caption from the first-floor battlemap background. The room layout, Foundry wall and door definitions, lighting, placed NPC tokens and exterior gate scene remain unchanged.
+## v1.2.1
+
+The First Floor battlemap is now provided without baked-in room name labels, while the scene, door walls and NPCs remain unchanged.
+
+## Ability icons (v1.2.2)
+
+18 distinct custom WebP icons in `assets/icons/` are now assigned to all NPC actions and features in the module's actor JSON. Shared abilities reuse the same icon. The icon migration runs when a GM loads the updated module and only replaces a tagged actor's existing stock Foundry icon, preserving custom icons. The Foundry console can also trigger the migration:
+
+```js
+await LibraryThousandfold.updateItemIcons()
+```
+
+The icon update changes only actor item artwork, not actor stats, features, scene walls, maps, or tokens.
