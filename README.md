@@ -50,3 +50,6 @@ The illustration contains room-name lettering, so you can see which room is whic
 ## Automatic ZIP build
 
 Changes to module source pushed to the `main` branch trigger `.github/workflows/build-module.yml`, which packages all module files into `dist/library-thousandfold.zip` and publishes a workflow artifact.
+## Version 1.2.1 — Unlabeled first-floor map
+
+Removed room titles and the main entrance caption from the first-floor battlemap background. The room layout, Foundry wall and door definitions, lighting, placed NPC tokens and exterior gate scene remain unchanged.
