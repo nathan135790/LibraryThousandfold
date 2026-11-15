@@ -1,8 +1,8 @@
 {
   "id": "library-thousandfold",
   "title": "Library of the Thousandfold — Grand Gate & First Floor",
-  "description": "Grand Gate and first-floor scenes, library NPCs, and Oswald Pendlewick's unlimited-use Hourglass with accumulating Temporal Strain, exhaustion and permanent aging.",
-  "version": "1.3.0",
+  "description": "Grand Gate and expanded Grand Library (48×32 five-foot squares), token-friendly movement, library NPCs and Oswald's Temporal Strain.",
+  "version": "1.3.1",
   "authors": [
     {
       "name": "Library of the Thousandfold Campaign"

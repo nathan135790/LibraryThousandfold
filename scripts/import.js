@@ -1,3 +1,5 @@
+import { expandSceneGeometry } from "./scene-scale.mjs";
+
 const MODULE = "library-thousandfold";
 const DATA = `modules/${MODULE}/data`;
 
@@ -5,7 +7,8 @@ Hooks.once("init", () => {
   for (const [key, name, hint] of [
     ["contentImported", "Gate content imported", "Tracks the original entrance scene and NPCs."],
     ["oswaldImported", "Oswald imported", "Tracks the time scholar."],
-    ["interiorImported", "Library interior imported", "Tracks the first-floor scene and its staff actors."]
+    ["interiorImported", "Library interior imported", "Tracks the first-floor scene and its staff actors."],
+    ["expandedInteriorImported", "Expanded library imported", "Tracks the larger, token-friendly first-floor scene."]
   ]) game.settings.register(MODULE, key, {name, hint, scope: "world", config: false, type: Boolean, default: false});
 });
 
@@ -74,6 +77,63 @@ async function importInterior() {
   ui.notifications.info("Thousandfold: the first-floor library scene and staff are available.");
   return scene;
 }
+
+/**
+ * Import a spacious two-times-linear-scale library scene. Grid size remains
+ * 128 pixels / 5 feet: a Medium creature remains one square while the library
+ * gains 48 x 32 walkable grid cells instead of 24 x 16.
+ *
+ * If the old library already exists in this world, duplicate its CURRENT
+ * geometry, tokens, lights, and adjustments before scaling. Never overwrite it.
+ */
+async function importExpandedInterior() {
+  requireGm();
+  const exists = game.scenes.find(scene => hasSource(scene, "grand-library-first-floor-expanded"));
+  if (exists) return exists;
+  const previous = game.scenes.find(scene => hasSource(scene, "grand-library-first-floor"));
+  let sceneData;
+  if (previous) {
+    // Copy any in-world changes: staff tokens, walls, doors, custom lighting.
+    sceneData = expandSceneGeometry(previous.toObject(), 2);
+    delete sceneData._id;
+    delete sceneData._stats;
+    delete sceneData.thumb; // Let Foundry regenerate the thumbnail.
+    sceneData.active = false;
+  } else {
+    sceneData = await loadJson("scenes/grand-library-first-floor-expanded.json");
+    const [librarian, guard, clerk, conservator, head, warden, oswald] = await Promise.all([
+      ensureActor("librarian.json"), ensureActor("scholar-guard.json"),
+      ensureActor("mail-clerk.json"), ensureActor("restoration-conservator.json"),
+      ensureActor("head-librarian.json"), ensureActor("vault-warden.json"),
+      ensureActor("oswald-pendlewick.json")
+    ]);
+    const tokenPlan = [
+      [guard, 1420, 1690], [guard, 1980, 1680],
+      [librarian, 1250, 990], [librarian, 255, 960],
+      [librarian, 360, 1650], [clerk, 1360, 210],
+      [conservator, 205, 590], [head, 2815, 595],
+      [warden, 2030, 235], [oswald, 1470, 1130]
+    ];
+    sceneData.tokens = tokenPlan.map(([actor, x, y]) => makeToken(actor, 2*x, 2*y));
+  }
+  sceneData.name = "Library of the Thousandfold — Grand Library (Expanded)";
+  sceneData.navName = "Grand Library — Expanded";
+  sceneData.navigation = true;
+  sceneData.flags = {
+    ...(sceneData.flags ?? {}),
+    [MODULE]: {
+      ...(sceneData.flags?.[MODULE] ?? {}),
+      source: "grand-library-first-floor-expanded",
+      expansionFactor: 2,
+      expandedFrom: previous?.id ?? null
+    }
+  };
+  const created = await Scene.create(sceneData);
+  await game.settings.set(MODULE, "expandedInteriorImported", true);
+  ui.notifications.info("Thousandfold: expanded library scene imported (48 × 32 squares). Existing library scene preserved.");
+  return created;
+}
+
 async function importContent() {
   requireGm();
   const [guard, librarian] = await Promise.all([
@@ -89,7 +149,7 @@ async function importContent() {
   }
   await game.settings.set(MODULE, "contentImported", true);
   await importOswald();
-  await importInterior();
+  await importExpandedInterior();
   return gate;
 }
 
@@ -145,32 +205,37 @@ async function updateItemIcons() {
   return modified;
 }
 
-globalThis.LibraryThousandfold = {importContent, importOswald, importInterior, updateItemIcons};
+globalThis.LibraryThousandfold = {importContent, importOswald, importInterior, importExpandedInterior, updateItemIcons};
 
 Hooks.once("ready", async () => {
   if (!game.user?.isGM || game.system.id !== "dnd5e") return;
-  try { await updateItemIcons(); } catch (e) { console.warn("Library item icon migration failed", e); }
+  try { await updateItemIcons(); } catch (error) { console.warn("Library item icon migration failed", error); }
   const hasGate = game.settings.get(MODULE, "contentImported") ||
     game.scenes.some(scene => hasSource(scene, "grand-gate"));
   const hasOswald = game.settings.get(MODULE, "oswaldImported") ||
     game.actors.some(actor => hasSource(actor, "oswald-pendlewick"));
-  const hasInterior = game.settings.get(MODULE, "interiorImported") ||
-    game.scenes.some(scene => hasSource(scene, "grand-library-first-floor"));
-  if (hasGate && hasOswald && hasInterior) return;
-  const prompt = hasGate
-    ? `<p>Import the new <strong>Grand Library — First Floor</strong> scene, staff, and any missing Oswald actor?</p><p>Your existing gate scene and actor edits will be preserved.</p>`
-    : `<p>Import both the <strong>Grand Gate</strong> and <strong>Grand Library — First Floor</strong> scenes, together with Scholar Guards, librarians, staff and Oswald Pendlewick?</p><p>Existing imported documents will not be overwritten.</p>`;
-  const accepted = await Dialog.confirm({title:"Library of the Thousandfold",content:prompt,
-    yes: () => true, no: () => false, defaultYes: true});
+  const hasExpanded = game.scenes.some(scene => hasSource(scene, "grand-library-first-floor-expanded"));
+  const hasLegacyInterior = game.scenes.some(scene => hasSource(scene, "grand-library-first-floor"));
+  if (hasGate && hasOswald && hasExpanded) return;
+  const prompt = !hasGate
+    ? '<p>Import the <strong>Grand Gate</strong> and spacious <strong>Grand Library — First Floor (Expanded)</strong> plus staff and Oswald?</p><p>Playable interior: 48 × 32 five-foot squares, with tokens remaining one square each.</p>'
+    : hasLegacyInterior
+      ? '<p>Create an <strong>expanded copy</strong> of your existing first-floor library?</p><p>This doubles its width and length while keeping tokens one square. Walls, doors, lighting and custom token positions are copied; the old scene stays untouched.</p>'
+      : '<p>Import the spacious <strong>Grand Library — First Floor (Expanded)</strong> and any missing staff?</p><p>Your existing scenes will not be changed.</p>';
+  const accepted = await Dialog.confirm({
+    title: "Library of the Thousandfold — Expanded Floor",
+    content: prompt,
+    yes: () => true, no: () => false, defaultYes: true
+  });
   if (!accepted) return;
   try {
     if (!hasGate) await importContent();
     else {
       if (!hasOswald) await importOswald();
-      if (!hasInterior) await importInterior();
+      if (!hasExpanded) await importExpandedInterior();
     }
   } catch (error) {
-    console.error(`${MODULE}: import failed`,error);
-    ui.notifications.error(`Library import failed: ${error.message}`);
+    console.error(`${MODULE}: expanded scene import failed`, error);
+    ui.notifications.error(`Library expansion failed: ${error.message}`);
   }
 });

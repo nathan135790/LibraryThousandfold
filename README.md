@@ -102,3 +102,24 @@ On first load as GM, the module attempts a **careful one-time Oswald upgrade**. 
 **Compatibility:** Designed for Foundry V13, D&D5e v6. The module includes compatibility fallbacks for Foundry V12 / D&D5e v4–5 but precise roll-mode enforcement has not been tested in a live world. No Midi-QOL or other dependency is required.
 
 Developers can run pure rules tests with `node --test tests/temporal-rules.test.mjs`.
+
+## v1.3.1 — Grand Library floor expansion
+
+The library interior is now available in an **expanded, playable 48 × 32-square version**, compared with the original 24 × 16-square scene. At **5 ft per square** and a **128-pixel grid**, that gives 240 × 160 feet of area (compared with 120 × 80 feet): **2× width, 2× length, 4× floor area**.
+
+The expanded scene dimensions are **6144 × 4096**. Unlike merely upscaling a picture while also enlarging the grid, the grid size stays unchanged. Medium player tokens still occupy 1 × 1 square, so corridors, rooms and gaps between shelves offer more room to move. The existing unlabeled library image is rendered at the enlarged scene dimensions; the art is unchanged (and may look softer when zoomed in).
+
+**Existing worlds:** Reload the updated module as GM and accept the prompt. The importer creates **Grand Library — Expanded** as a *separate scene*. It duplicates your existing first-floor scene, if present, and scales its current walls, doors, lights, tokens, tiles and drawings while retaining their placement relative to the room layout. Your original interior scene, actor documents, and gate scene remain untouched. Already placed Medium tokens remain one square.
+
+**New worlds:** The standard content importer creates the expanded interior directly; the original smaller scene template remains available for optional manual import.
+
+**Manual commands** (GM browser console):
+
+```js
+await LibraryThousandfold.importExpandedInterior() // Safe to call again; avoids duplicates
+await LibraryThousandfold.importInterior() // Legacy smaller map, if desired
+```
+
+**Access rules preserved:** Restricted Archives only through the Mail Room; Artifact Vault through Security; Portal Chamber through the Head Librarian's Office. Locked doors stay locked, with the same 13 interactive door segments and 19 lights. Character actors, item icons, and Oswald's Temporal Strain rules are unchanged.
+
+There is no active Foundry server connected for live rendering tests. Run in a backup or test world first if your existing interior scene has extensive custom modules or region data.

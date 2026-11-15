@@ -30,7 +30,7 @@ jobs:
           node --check scripts/temporal-rules.mjs
 
       - name: Test Temporal Strain rules
-        run: node --test tests/temporal-rules.test.mjs
+        run: node --test tests/*.test.mjs
 
       - name: Build installable FoundryVTT ZIP
         shell: bash
