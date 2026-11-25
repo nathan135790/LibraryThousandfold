@@ -123,3 +123,30 @@ await LibraryThousandfold.importInterior() // Legacy smaller map, if desired
 **Access rules preserved:** Restricted Archives only through the Mail Room; Artifact Vault through Security; Portal Chamber through the Head Librarian's Office. Locked doors stay locked, with the same 13 interactive door segments and 19 lights. Character actors, item icons, and Oswald's Temporal Strain rules are unchanged.
 
 There is no active Foundry server connected for live rendering tests. Run in a backup or test world first if your existing interior scene has extensive custom modules or region data.
+
+## v1.4.0 — First-floor atrium, staircase, elevator & staff spiral (2026-11-25)
+
+**The proposed first-floor redesign was approved by the GM and packaged as a separate scene, not as an overwrite of existing campaign data.** It uses the approved unlabeled first-floor illustration. Its principal architectural landmarks line up by normalized position with the second-floor concept in the shared DND design reference.
+
+**New scene:** `Grand Library — Atrium F1`, 8000 × 5400 px, **80 × 54 five-foot squares** at 100 px/grid. This production-prototype footprint preserves the matching 1536:1024 art aspect ratio, with **normal-size furniture** and free lanes rather than stretching the old 48 × 32 art. The previously proposed 80 × 65 floor footprint remains a provisional target for both floors, and is **not** the actual geometry of this deliverable.
+
+**Import:** As GM, update the module and reload the world, then accept the prompt to import the redesigned first floor. It coexists with `Grand Library — Expanded` (48 × 32 squares), `Grand Library — First Floor` (24 × 16), and the Grand Gate; no existing scenes, tokens or actor documents are overwritten. To import on demand from the GM browser console:
+```js
+await LibraryThousandfold.importAtriumFirstFloor()
+```
+Repeated calls return the existing atrium scene.
+
+**What is configured:** 81 wall segments, **14 door segments** (two front entrance leaves), **2 locked doors** (Restricted Archives through Mail Room; Artifact Vault through Security), 25 scene light sources (including portal glow), configured room boundaries, bookshelf and pillar collision/sight blocking, and 10 placed NPCs including Oswald Pendlewick at a normal open-hall desk. The Portal Chamber still connects **only to the Head Librarian's Office**, which also connects to the public hall. There is no archive-to-restoration passage.
+
+**Shared second-floor alignment:**
+- South-center **grand staircase** approximately at source art (760, 833), which matches the second-floor concept's main landing.
+- Brass **book elevator** immediately west approximately at (600, 829).
+- **Staff spiral staircase** immediately east approximately at (947, 829).
+- The central grand hall is double-height beneath the open second-floor atrium.
+- Four structural support pillars correspond to the upstairs balcony support axis.
+
+These are design concept coordinates, not final measured second-floor geometry. Stair/elevator destinations are recorded in scene flags but **no teleportation triggers or second-floor scene** are installed, because the second floor is still being designed. Set the final travel transitions after that scene exists; coordinate both floors before final production use.
+
+**Reference:** [Second-floor v2 concept](https://drive.google.com/file/d/1CTR-exKtuugCi_NRKWJvkrPONIGx7gc4/view) · [Shared architecture and pending choices](https://github.com/nathan135790/dnd-data/blob/master/Data/locations/library/DESIGN.md).
+
+**Testing:** The JSON asset, room-connection flags, 5-foot grid, image, wall coordinates, locked-door counts and light bounds were validated locally. Not yet tested live in Foundry; check token movement and door positions on a test world. The redesigned scene is deliberately additive.

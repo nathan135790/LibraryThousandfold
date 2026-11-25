@@ -8,7 +8,8 @@ Hooks.once("init", () => {
     ["contentImported", "Gate content imported", "Tracks the original entrance scene and NPCs."],
     ["oswaldImported", "Oswald imported", "Tracks the time scholar."],
     ["interiorImported", "Library interior imported", "Tracks the first-floor scene and its staff actors."],
-    ["expandedInteriorImported", "Expanded library imported", "Tracks the larger, token-friendly first-floor scene."]
+    ["expandedInteriorImported", "Expanded library imported", "Tracks the larger, token-friendly first-floor scene."],
+    ["atriumInteriorImported", "First-floor atrium imported", "Tracks redesigned first floor with stair/lift/spiral connections."]
   ]) game.settings.register(MODULE, key, {name, hint, scope: "world", config: false, type: Boolean, default: false});
 });
 
@@ -134,6 +135,43 @@ async function importExpandedInterior() {
   return created;
 }
 
+
+/**
+ * First floor atrium redesign, visually aligned to the second-floor v2 concept.
+ * Import as a SEPARATE scene so an established campaign is never overwritten.
+ * Grid: 80 x 54 squares, 100 px per 5-ft square; art is a concept plan.
+ */
+async function importAtriumFirstFloor() {
+  requireGm();
+  const existing = game.scenes.find(scene => hasSource(scene, "grand-library-first-floor-atrium"));
+  if (existing) return existing;
+  const [librarian, guard, clerk, conservator, head, warden, oswald] = await Promise.all([
+    ensureActor("librarian.json"), ensureActor("scholar-guard.json"),
+    ensureActor("mail-clerk.json"), ensureActor("restoration-conservator.json"),
+    ensureActor("head-librarian.json"), ensureActor("vault-warden.json"),
+    ensureActor("oswald-pendlewick.json")
+  ]);
+  const data = await loadJson("scenes/grand-library-first-floor-atrium.json");
+  const sourceWidth = 1536, sourceHeight = 1024;
+  const tokenPlan = [
+    [guard, 677, 900], [guard, 871, 900],              // Entrance guards
+    [librarian, 570, 431], [librarian, 171, 492],     // Main hall / study room
+    [librarian, 227, 839],                            // Reception
+    [clerk, 567, 118],                               // Mail Room
+    [conservator, 199, 314],                         // Restoration Workshop
+    [head, 1377, 370],                               // Office
+    [warden, 987, 117],                              // Security Room
+    [oswald, 1002, 522]                              // Normal scholar; open hall desk
+  ];
+  data.tokens = tokenPlan.map(([actor, x, y]) =>
+    makeToken(actor, Math.round(x * data.width / sourceWidth),
+                     Math.round(y * data.height / sourceHeight)));
+  const scene = await Scene.create(data);
+  await game.settings.set(MODULE, "atriumInteriorImported", true);
+  ui.notifications.info("Thousandfold: redesigned first-floor atrium scene created. Earlier scenes are unchanged.");
+  return scene;
+}
+
 async function importContent() {
   requireGm();
   const [guard, librarian] = await Promise.all([
@@ -149,7 +187,7 @@ async function importContent() {
   }
   await game.settings.set(MODULE, "contentImported", true);
   await importOswald();
-  await importExpandedInterior();
+  await importAtriumFirstFloor();
   return gate;
 }
 
@@ -205,7 +243,7 @@ async function updateItemIcons() {
   return modified;
 }
 
-globalThis.LibraryThousandfold = {importContent, importOswald, importInterior, importExpandedInterior, updateItemIcons};
+globalThis.LibraryThousandfold = {importContent, importOswald, importInterior, importExpandedInterior, importAtriumFirstFloor, updateItemIcons};
 
 Hooks.once("ready", async () => {
   if (!game.user?.isGM || game.system.id !== "dnd5e") return;
@@ -214,28 +252,25 @@ Hooks.once("ready", async () => {
     game.scenes.some(scene => hasSource(scene, "grand-gate"));
   const hasOswald = game.settings.get(MODULE, "oswaldImported") ||
     game.actors.some(actor => hasSource(actor, "oswald-pendlewick"));
-  const hasExpanded = game.scenes.some(scene => hasSource(scene, "grand-library-first-floor-expanded"));
-  const hasLegacyInterior = game.scenes.some(scene => hasSource(scene, "grand-library-first-floor"));
-  if (hasGate && hasOswald && hasExpanded) return;
-  const prompt = !hasGate
-    ? '<p>Import the <strong>Grand Gate</strong> and spacious <strong>Grand Library — First Floor (Expanded)</strong> plus staff and Oswald?</p><p>Playable interior: 48 × 32 five-foot squares, with tokens remaining one square each.</p>'
-    : hasLegacyInterior
-      ? '<p>Create an <strong>expanded copy</strong> of your existing first-floor library?</p><p>This doubles its width and length while keeping tokens one square. Walls, doors, lighting and custom token positions are copied; the old scene stays untouched.</p>'
-      : '<p>Import the spacious <strong>Grand Library — First Floor (Expanded)</strong> and any missing staff?</p><p>Your existing scenes will not be changed.</p>';
+  const hasAtrium = game.scenes.some(scene => hasSource(scene, "grand-library-first-floor-atrium"));
+  if (hasGate && hasOswald && hasAtrium) return;
+  const hasOlderInterior = game.scenes.some(scene => ["grand-library-first-floor-expanded", "grand-library-first-floor"].includes(scene.getFlag(MODULE, "source")));
+  const prompt = hasOlderInterior
+    ? "<p>Import the <strong>redesigned Grand Library — First Floor (Atrium)</strong> with the south-center main stairs, west book elevator and east staff spiral?</p><p>This creates a new scene without changing your current first-floor map, tokens or custom edits. The second-floor destination is not built into this module yet.</p>"
+    : "<p>Import the <strong>Grand Library — First Floor (Atrium)</strong> and any missing entrance/actor content?</p><p>Includes the updated central staircase, book elevator, staff spiral and library NPCs. It does not automatically link to a second-floor scene.</p>";
   const accepted = await Dialog.confirm({
-    title: "Library of the Thousandfold — Expanded Floor",
-    content: prompt,
-    yes: () => true, no: () => false, defaultYes: true
+    title: "Library of the Thousandfold — First Floor Atrium",
+    content: prompt, yes: () => true, no: () => false, defaultYes: true
   });
   if (!accepted) return;
   try {
     if (!hasGate) await importContent();
     else {
       if (!hasOswald) await importOswald();
-      if (!hasExpanded) await importExpandedInterior();
+      if (!hasAtrium) await importAtriumFirstFloor();
     }
   } catch (error) {
-    console.error(`${MODULE}: expanded scene import failed`, error);
-    ui.notifications.error(`Library expansion failed: ${error.message}`);
+    console.error(`${MODULE}: atrium scene import failed`, error);
+    ui.notifications.error(`Library atrium import failed: ${error.message}`);
   }
 });

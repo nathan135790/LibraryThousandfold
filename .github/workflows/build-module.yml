@@ -27,6 +27,7 @@ jobs:
         run: |
           cp scripts/temporal.js /tmp/temporal-controller.mjs
           node --check /tmp/temporal-controller.mjs
+          node --check scripts/import.js
           node --check scripts/temporal-rules.mjs
 
       - name: Test Temporal Strain rules

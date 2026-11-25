@@ -1,0 +1,2136 @@
+{
+  "name": "Library of the Thousandfold \u2014 First Floor (Atrium)",
+  "navigation": true,
+  "navName": "Grand Library \u2014 Atrium F1",
+  "background": {
+    "src": "modules/library-thousandfold/assets/maps/grand-library-first-floor-atrium.webp",
+    "offsetX": 0,
+    "offsetY": 0
+  },
+  "width": 8000,
+  "height": 5400,
+  "padding": 0,
+  "grid": {
+    "type": 1,
+    "size": 100,
+    "distance": 5,
+    "units": "ft",
+    "alpha": 0.08,
+    "color": "#16110d"
+  },
+  "tokenVision": true,
+  "fogExploration": true,
+  "globalLight": true,
+  "environment": {
+    "darknessLevel": 0
+  },
+  "walls": [
+    {
+      "c": [
+        94,
+        74,
+        7911,
+        74
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        94,
+        74,
+        94,
+        5004
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        7911,
+        74,
+        7911,
+        5004
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        94,
+        5004,
+        3620,
+        5004
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        4411,
+        5004,
+        7911,
+        5004
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        3620,
+        5004,
+        4016,
+        5004
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Main entrance \u2014 west door leaf"
+        }
+      }
+    },
+    {
+      "c": [
+        4016,
+        5004,
+        4411,
+        5004
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Main entrance \u2014 east door leaf"
+        }
+      }
+    },
+    {
+      "c": [
+        2156,
+        74,
+        2156,
+        617
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2156,
+        617,
+        2156,
+        849
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 2,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Restricted Archives \u2194 Mail Room (locked)"
+        }
+      }
+    },
+    {
+      "c": [
+        2156,
+        849,
+        2156,
+        1049
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        4167,
+        74,
+        4167,
+        612
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        4167,
+        612,
+        4167,
+        849
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Mail Room \u2194 Security Room"
+        }
+      }
+    },
+    {
+      "c": [
+        4167,
+        849,
+        4167,
+        1049
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        6276,
+        74,
+        6276,
+        596
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        6276,
+        596,
+        6276,
+        849
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 2,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Security Room \u2194 Artifact Vault (locked)"
+        }
+      }
+    },
+    {
+      "c": [
+        6276,
+        849,
+        6276,
+        1049
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        94,
+        1060,
+        3589,
+        1060
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        3589,
+        1060,
+        3849,
+        1060
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Mail Room \u2194 Grand Library Hall"
+        }
+      }
+    },
+    {
+      "c": [
+        3849,
+        1060,
+        7911,
+        1060
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        94,
+        2225,
+        1542,
+        2225
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        1542,
+        1123,
+        1542,
+        1777
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        1542,
+        1777,
+        1542,
+        2057
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Restoration Workshop \u2194 Grand Hall"
+        }
+      }
+    },
+    {
+      "c": [
+        1542,
+        2057,
+        1542,
+        2220
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        94,
+        2310,
+        1448,
+        2310
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        1448,
+        2310,
+        1448,
+        2526
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        1448,
+        2526,
+        1448,
+        2742
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Quiet Study 1 \u2194 Grand Hall"
+        }
+      }
+    },
+    {
+      "c": [
+        1448,
+        2742,
+        1448,
+        3032
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        94,
+        3048,
+        1448,
+        3048
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        94,
+        3090,
+        1448,
+        3090
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        1448,
+        3090,
+        1448,
+        3333
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        1448,
+        3333,
+        1448,
+        3570
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Quiet Study 2 \u2194 Grand Hall"
+        }
+      }
+    },
+    {
+      "c": [
+        1448,
+        3570,
+        1448,
+        3823
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        94,
+        3865,
+        1745,
+        3865
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        1745,
+        3865,
+        1745,
+        3987
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        1745,
+        3987,
+        1979,
+        3987
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        1979,
+        3987,
+        1979,
+        4282
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        1979,
+        4282,
+        1979,
+        4577
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Reception \u2194 Grand Hall"
+        }
+      }
+    },
+    {
+      "c": [
+        1979,
+        4577,
+        1979,
+        5004
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        6484,
+        1113,
+        6484,
+        1809
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        6484,
+        1809,
+        6484,
+        2120
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Head Librarian's Office \u2194 Grand Hall"
+        }
+      }
+    },
+    {
+      "c": [
+        6484,
+        2120,
+        6484,
+        2600
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        6484,
+        1113,
+        7911,
+        1113
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        6484,
+        2600,
+        6953,
+        2600
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        6953,
+        2600,
+        7318,
+        2600
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Head Librarian's Office \u2194 Portal Chamber"
+        }
+      }
+    },
+    {
+      "c": [
+        7318,
+        2600,
+        7911,
+        2600
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        6484,
+        2600,
+        6484,
+        3881
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        6484,
+        3881,
+        7911,
+        3881
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        6156,
+        3987,
+        7911,
+        3987
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        6156,
+        3987,
+        6156,
+        4293
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        6156,
+        4293,
+        6156,
+        4577
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Quiet Study 3 \u2194 Grand Hall"
+        }
+      }
+    },
+    {
+      "c": [
+        6156,
+        4577,
+        6156,
+        5004
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "solid wall"
+        }
+      }
+    },
+    {
+      "c": [
+        2240,
+        1455,
+        2474,
+        1455
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "NW support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        2474,
+        1455,
+        2474,
+        2157
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "NW support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        2474,
+        2157,
+        2240,
+        2157
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "NW support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        2240,
+        2157,
+        2240,
+        1455
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "NW support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        5536,
+        1455,
+        5781,
+        1455
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "NE support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        5781,
+        1455,
+        5781,
+        2167
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "NE support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        5781,
+        2167,
+        5536,
+        2167
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "NE support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        5536,
+        2167,
+        5536,
+        1455
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "NE support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        2255,
+        2974,
+        2505,
+        2974
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "SW support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        2505,
+        2974,
+        2505,
+        3734
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "SW support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        2505,
+        3734,
+        2255,
+        3734
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "SW support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        2255,
+        3734,
+        2255,
+        2974
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "SW support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        5547,
+        2958,
+        5792,
+        2958
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "SE support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        5792,
+        2958,
+        5792,
+        3734
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "SE support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        5792,
+        3734,
+        5547,
+        3734
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "SE support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        5547,
+        3734,
+        5547,
+        2958
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "SE support pillar"
+        }
+      }
+    },
+    {
+      "c": [
+        2734,
+        1767,
+        3375,
+        1767
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "freestanding bookshelf \u2014 blocks movement and sight"
+        }
+      }
+    },
+    {
+      "c": [
+        4604,
+        1767,
+        5312,
+        1767
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "freestanding bookshelf \u2014 blocks movement and sight"
+        }
+      }
+    },
+    {
+      "c": [
+        2411,
+        2473,
+        3432,
+        2473
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "freestanding bookshelf \u2014 blocks movement and sight"
+        }
+      }
+    },
+    {
+      "c": [
+        4578,
+        2473,
+        5521,
+        2473
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "freestanding bookshelf \u2014 blocks movement and sight"
+        }
+      }
+    },
+    {
+      "c": [
+        2422,
+        2958,
+        3432,
+        2958
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "freestanding bookshelf \u2014 blocks movement and sight"
+        }
+      }
+    },
+    {
+      "c": [
+        4562,
+        2974,
+        5469,
+        2974
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "freestanding bookshelf \u2014 blocks movement and sight"
+        }
+      }
+    },
+    {
+      "c": [
+        2516,
+        3386,
+        3370,
+        3386
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "freestanding bookshelf \u2014 blocks movement and sight"
+        }
+      }
+    },
+    {
+      "c": [
+        4620,
+        3380,
+        5453,
+        3380
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "freestanding bookshelf \u2014 blocks movement and sight"
+        }
+      }
+    },
+    {
+      "c": [
+        2854,
+        4097,
+        2854,
+        4688
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "book elevator west shaft"
+        }
+      }
+    },
+    {
+      "c": [
+        3375,
+        4097,
+        3375,
+        4688
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "book elevator east shaft"
+        }
+      }
+    },
+    {
+      "c": [
+        2854,
+        4688,
+        2979,
+        4688
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "book elevator south enclosure"
+        }
+      }
+    },
+    {
+      "c": [
+        2979,
+        4688,
+        3271,
+        4688
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 1,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "Book elevator access (GM operated)"
+        }
+      }
+    },
+    {
+      "c": [
+        3271,
+        4688,
+        3375,
+        4688
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "book elevator south enclosure"
+        }
+      }
+    },
+    {
+      "c": [
+        2854,
+        4097,
+        3375,
+        4097
+      ],
+      "move": 20,
+      "sight": 20,
+      "sound": 20,
+      "light": 20,
+      "dir": 0,
+      "door": 0,
+      "ds": 0,
+      "flags": {
+        "library-thousandfold": {
+          "purpose": "book elevator north shaft"
+        }
+      }
+    }
+  ],
+  "lights": [
+    {
+      "x": 281,
+      "y": 1751,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 438,
+      "y": 2515,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 438,
+      "y": 3364,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 438,
+      "y": 4424,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 1234,
+      "y": 4477,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 2432,
+      "y": 1334,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 3646,
+      "y": 1313,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 4417,
+      "y": 1324,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 5818,
+      "y": 1287,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 3620,
+      "y": 2094,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 4375,
+      "y": 2099,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 3620,
+      "y": 2906,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 4370,
+      "y": 2890,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 2349,
+      "y": 4029,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 2828,
+      "y": 4198,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 5203,
+      "y": 4187,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 5661,
+      "y": 3945,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 7240,
+      "y": 1872,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 7661,
+      "y": 1756,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 6964,
+      "y": 4266,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 7589,
+      "y": 4340,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 3047,
+      "y": 369,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 5177,
+      "y": 390,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 6859,
+      "y": 459,
+      "hidden": false,
+      "config": {
+        "dim": 35,
+        "bright": 17,
+        "color": "#ffd28b",
+        "alpha": 0.38,
+        "animation": {
+          "type": "torch",
+          "speed": 1,
+          "intensity": 1
+        }
+      }
+    },
+    {
+      "x": 7156,
+      "y": 3243,
+      "hidden": false,
+      "config": {
+        "dim": 65,
+        "bright": 30,
+        "color": "#6968ff",
+        "alpha": 0.52,
+        "animation": {
+          "type": "pulse",
+          "speed": 1,
+          "intensity": 2
+        }
+      }
+    }
+  ],
+  "tokens": [],
+  "tiles": [],
+  "notes": [],
+  "sounds": [],
+  "drawings": [],
+  "templates": [],
+  "flags": {
+    "library-thousandfold": {
+      "source": "grand-library-first-floor-atrium",
+      "version": "1.4.0",
+      "architecture": "proposed first-floor stair-lift-spiral arrangement aligned to second-floor-concept-v2-expanded.png; target upstairs coordinates provisional",
+      "roomAccess": {
+        "restrictedArchives": "mail-room-only",
+        "artifactVault": "security-room-only",
+        "portalChamber": "head-librarian-office-only",
+        "headLibrarianOffice": "grand-library-hall-and-portal-chamber"
+      },
+      "gridSpace": {
+        "columns": 80,
+        "rows": 54,
+        "feetPerSquare": 5
+      },
+      "verticalConnections": {
+        "main_stair": {
+          "type": "grand staircase",
+          "target_area": "second floor south-center balcony landing",
+          "status": "destination scene not installed",
+          "position": [
+            3958,
+            4393
+          ]
+        },
+        "book_elevator": {
+          "type": "book elevator",
+          "target_area": "second floor west of main stair",
+          "status": "destination scene not installed",
+          "position": [
+            3125,
+            4372
+          ]
+        },
+        "staff_spiral": {
+          "type": "staff spiral staircase",
+          "target_area": "second floor east of main stair",
+          "status": "destination scene not installed",
+          "position": [
+            4932,
+            4372
+          ]
+        },
+        "atrium": {
+          "type": "double height open hall",
+          "target_area": "second floor open atrium; no floor surface directly above",
+          "status": "architectural coordination",
+          "position": [
+            3995,
+            2515
+          ]
+        },
+        "supports": {
+          "type": "load-bearing pillars",
+          "status": "coordinate with upper-floor balcony",
+          "positions": [
+            [
+              2344,
+              1804
+            ],
+            [
+              5651,
+              1814
+            ],
+            [
+              2380,
+              3380
+            ],
+            [
+              5677,
+              3349
+            ]
+          ]
+        }
+      },
+      "note": "Design art is a visual concept. Grid 80x54 chosen to preserve aspect ratio; shared 80x65 full floor target remains provisional. Stair travel destinations must be linked when second-floor scene is built. Original map and old imported world scenes remain intact."
+    }
+  }
+}
