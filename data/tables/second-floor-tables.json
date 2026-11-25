@@ -1,0 +1,66 @@
+{
+  "Random Library Encounters — D20": [
+    "A falling book reverses direction.",
+    "A librarian recognizes an adventurer they have never met.",
+    "A mechanical spider steals a trinket.",
+    "Two scholars argue about whether yesterday happened.",
+    "A scholar walks past twice in opposite directions.",
+    "Guards transport a locked container.",
+    "A painting gestures toward a restricted room.",
+    "A librarian requests missing pages.",
+    "All sound disappears for six seconds.",
+    "An adventurer hears their own voice in an empty room.",
+    "A researcher offers to examine the compass.",
+    "Oswald walks past, and the compass follows him.",
+    "A candle burns backward.",
+    "A door briefly opens into a different room.",
+    "A scholar's shadow moves independently.",
+    "A book contains a portrait of an adventurer.",
+    "An animated book refuses to return to its shelf.",
+    "A researcher offers payment for an experiment.",
+    "A note appears in an adventurer's handwriting.",
+    "Everyone except the party briefly freezes."
+  ],
+  "Stored Memories": [
+    "A child's first view of the ocean.",
+    "A soldier's final conversation.",
+    "A scholar discovers forbidden knowledge.",
+    "Someone waits for a loved one who never returns.",
+    "A criminal hides an object under a floorboard.",
+    "An unknown language is spoken.",
+    "A forgotten PC memory (GM selects).",
+    "Oswald conducts an hourglass experiment."
+  ],
+  "Possible Futures": [
+    "A scholar turns an hourglass and a wound disappears.",
+    "One adventurer is absent from the record.",
+    "A door opens onto a place that does not exist.",
+    "A guard offers a surprising bargain.",
+    "The party saves an artifact instead of taking it.",
+    "A warning is written in the party's handwriting."
+  ],
+  "Scholar Rumors": [
+    "Oswald has not slept.",
+    "A book was returned before it was borrowed.",
+    "The clock has been running backward.",
+    "Someone's mirror reflection moved by itself.",
+    "A researcher wants a volunteer.",
+    "A guard is investigating a missing credential."
+  ],
+  "Temporal Anomalies": [
+    "A falling object hangs in the air.",
+    "A clock reverses for a moment.",
+    "A voice repeats a previous sentence.",
+    "A temporal echo appears.",
+    "A candle restores its wax.",
+    "A sound is delayed several seconds."
+  ],
+  "Artifact Malfunctions": [
+    "Lantern reveals a strange silhouette.",
+    "Portrait changes subject.",
+    "A display case hums.",
+    "Door shows an unfamiliar room.",
+    "Hourglass sand floats.",
+    "A coin lands on its edge."
+  ]
+}

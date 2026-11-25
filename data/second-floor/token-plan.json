@@ -1,0 +1,72 @@
+[
+  {
+    "source": "f2-female-scholar-guard",
+    "position": [
+      2396,
+      1556
+    ]
+  },
+  {
+    "source": "f2-male-scholar-guard",
+    "position": [
+      5599,
+      1556
+    ]
+  },
+  {
+    "source": "f2-restricted-archivist",
+    "position": [
+      2161,
+      1187
+    ]
+  },
+  {
+    "source": "f2-temporal-researcher",
+    "position": [
+      3667,
+      1150
+    ]
+  },
+  {
+    "source": "f2-artifact-curator",
+    "position": [
+      885,
+      2463
+    ]
+  },
+  {
+    "source": "f2-mirror-supervisor",
+    "position": [
+      6771,
+      3148
+    ]
+  },
+  {
+    "source": "f2-arcane-researcher",
+    "position": [
+      1510,
+      4140
+    ]
+  },
+  {
+    "source": "f2-junior-scholar",
+    "position": [
+      6911,
+      4261
+    ]
+  },
+  {
+    "source": "f2-male-librarian",
+    "position": [
+      3490,
+      3691
+    ]
+  },
+  {
+    "source": "f2-female-librarian",
+    "position": [
+      4453,
+      3691
+    ]
+  }
+]

@@ -1,4 +1,5 @@
 import { expandSceneGeometry } from "./scene-scale.mjs";
+import { importSecondFloor, openLibraryPanel, travelLibrary, setLibraryAlert, libraryRoll, spawnLibraryActor } from "./second-floor.js";
 
 const MODULE = "library-thousandfold";
 const DATA = `modules/${MODULE}/data`;
@@ -188,6 +189,7 @@ async function importContent() {
   await game.settings.set(MODULE, "contentImported", true);
   await importOswald();
   await importAtriumFirstFloor();
+  await importSecondFloor();
   return gate;
 }
 
@@ -243,7 +245,7 @@ async function updateItemIcons() {
   return modified;
 }
 
-globalThis.LibraryThousandfold = {importContent, importOswald, importInterior, importExpandedInterior, importAtriumFirstFloor, updateItemIcons};
+globalThis.LibraryThousandfold = {importContent, importOswald, importInterior, importExpandedInterior, importAtriumFirstFloor, updateItemIcons, importSecondFloor, openLibraryPanel, travelLibrary, setLibraryAlert, libraryRoll, spawnLibraryActor};
 
 Hooks.once("ready", async () => {
   if (!game.user?.isGM || game.system.id !== "dnd5e") return;
@@ -253,13 +255,12 @@ Hooks.once("ready", async () => {
   const hasOswald = game.settings.get(MODULE, "oswaldImported") ||
     game.actors.some(actor => hasSource(actor, "oswald-pendlewick"));
   const hasAtrium = game.scenes.some(scene => hasSource(scene, "grand-library-first-floor-atrium"));
-  if (hasGate && hasOswald && hasAtrium) return;
+  const hasUpper = game.scenes.some(scene => hasSource(scene, "grand-library-second-floor"));
+  if (hasGate && hasOswald && hasAtrium && hasUpper) return;
   const hasOlderInterior = game.scenes.some(scene => ["grand-library-first-floor-expanded", "grand-library-first-floor"].includes(scene.getFlag(MODULE, "source")));
-  const prompt = hasOlderInterior
-    ? "<p>Import the <strong>redesigned Grand Library — First Floor (Atrium)</strong> with the south-center main stairs, west book elevator and east staff spiral?</p><p>This creates a new scene without changing your current first-floor map, tokens or custom edits. The second-floor destination is not built into this module yet.</p>"
-    : "<p>Import the <strong>Grand Library — First Floor (Atrium)</strong> and any missing entrance/actor content?</p><p>Includes the updated central staircase, book elevator, staff spiral and library NPCs. It does not automatically link to a second-floor scene.</p>";
+  const prompt = "<p>Import missing Library of the Thousandfold atrium floors, second-floor encounters, actors, items and GM tools?</p><p>Existing scenes and actors will be preserved. Stair travel is GM-controlled.</p>";
   const accepted = await Dialog.confirm({
-    title: "Library of the Thousandfold — First Floor Atrium",
+    title: "Library of the Thousandfold — Atrium Floors",
     content: prompt, yes: () => true, no: () => false, defaultYes: true
   });
   if (!accepted) return;
@@ -268,6 +269,7 @@ Hooks.once("ready", async () => {
     else {
       if (!hasOswald) await importOswald();
       if (!hasAtrium) await importAtriumFirstFloor();
+      if (!hasUpper) await importSecondFloor();
     }
   } catch (error) {
     console.error(`${MODULE}: atrium scene import failed`, error);

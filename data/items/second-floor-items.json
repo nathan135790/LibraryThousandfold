@@ -1,0 +1,1068 @@
+[
+  {
+    "name": "Hourglass of Unfinished Moments",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/hourglass-of-unfinished-moments.svg",
+    "system": {
+      "description": {
+        "value": "<p>Transferable reference only. Unlimited uses incur Temporal Strain; consult existing Oswald rules. Player attunement, power access and automation require GM approval; do not use this item to bypass strain.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "legendary",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-hourglass-of-unfinished-moments",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Book of Unwritten Futures",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/book-of-unwritten-futures.svg",
+    "system": {
+      "description": {
+        "value": "<p>On consultation, GM reveals one possible future, never a guaranteed outcome. Remains in library unless GM approves removal.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "veryRare",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-book-of-unwritten-futures",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Goal-Seeking Compass",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/goal-seeking-compass.svg",
+    "system": {
+      "description": {
+        "value": "<p>Points toward the holder's intended goal, including the Time Artifact carried by Oswald. Reference copy: use existing campaign compass if present.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "rare",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-goal-seeking-compass",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Stored Minute Hourglass",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/stored-minute-hourglass.svg",
+    "system": {
+      "description": {
+        "value": "<p>Touch to experience a stored minute; use GM memory table. Breaking it releases a scene echo.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "uncommon",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-stored-minute-hourglass",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Empty Memory Hourglass",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/empty-memory-hourglass.svg",
+    "system": {
+      "description": {
+        "value": "<p>Can store a minute only with GM-adjudicated temporal machinery.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "uncommon",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-empty-memory-hourglass",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Unlit Lantern",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/unlit-lantern.svg",
+    "system": {
+      "description": {
+        "value": "<p>As an action, reveal invisible creatures within 15 ft until start of your next turn; no visible light.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "rare",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-unlit-lantern",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Crown of Silence",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/crown-of-silence.svg",
+    "system": {
+      "description": {
+        "value": "<p>GM adjudicates suppressed speech within 10 ft; can end by removing crown.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "rare",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-crown-of-silence",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Unfinished Blade",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/unfinished-blade.svg",
+    "system": {
+      "description": {
+        "value": "<p>Changes into an appropriate melee weapon at GM discretion; use a normal weapon sheet for combat.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "rare",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-unfinished-blade",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Coin of Misfortune",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/coin-of-misfortune.svg",
+    "system": {
+      "description": {
+        "value": "<p>GM may grant advantage to one roll in exchange for disadvantage on another creature's roll. Distinct from campaign Luck Coin pending review.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "rare",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-coin-of-misfortune",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Door Without a Wall",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/door-without-a-wall.svg",
+    "system": {
+      "description": {
+        "value": "<p>An immovable exhibit; opening reveals a GM-selected destination. Do not automate teleportation.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "veryRare",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-door-without-a-wall",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Heart of Iron",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/heart-of-iron.svg",
+    "system": {
+      "description": {
+        "value": "<p>Beats when a creature dies within 60 ft.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "rare",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-heart-of-iron",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Empty Hourglass",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/empty-hourglass.svg",
+    "system": {
+      "description": {
+        "value": "<p>False lead: cannot hold any substance and is not the Time Artifact.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "uncommon",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-empty-hourglass",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Nameless Portrait",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/nameless-portrait.svg",
+    "system": {
+      "description": {
+        "value": "<p>Changes its subject each morning.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "uncommon",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-nameless-portrait",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Chained Grimoire",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/chained-grimoire.svg",
+    "system": {
+      "description": {
+        "value": "<p>Forbidden research; may be associated with the Hungry Book, not an automatic combat trigger.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "rare",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-chained-grimoire",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Temporal Pocket Watch",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-pocket-watch.svg",
+    "system": {
+      "description": {
+        "value": "<p>Detects nearby temporal disturbances; GM describes relative strength.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "uncommon",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-temporal-pocket-watch",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Arcane Handling Gloves",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/arcane-handling-gloves.svg",
+    "system": {
+      "description": {
+        "value": "<p>Advantage on a GM-approved check to handle hazardous magic.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "uncommon",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-arcane-handling-gloves",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Sound Recorder",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/sound-recorder.svg",
+    "system": {
+      "description": {
+        "value": "<p>Records up to one minute of sound; playback requires an action.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "uncommon",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-sound-recorder",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Arcane Storage Crystal",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/arcane-storage-crystal.svg",
+    "system": {
+      "description": {
+        "value": "<p>Stores energy for research; GM approves any mechanical use.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "uncommon",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-arcane-storage-crystal",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Mechanical Repair Kit",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/mechanical-repair-kit.svg",
+    "system": {
+      "description": {
+        "value": "<p>Tools for repairing clockwork constructs; DC and cost set by GM.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-mechanical-repair-kit",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Clockwork Components",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/clockwork-components.svg",
+    "system": {
+      "description": {
+        "value": "<p>Crafting material.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-clockwork-components",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Enchanted Brass",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/enchanted-brass.svg",
+    "system": {
+      "description": {
+        "value": "<p>Crafting material.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "uncommon",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-enchanted-brass",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Temporal Sand",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-sand.svg",
+    "system": {
+      "description": {
+        "value": "<p>Temporal research material; no independent time powers.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "rare",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-temporal-sand",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Mechanical Spider Blueprint",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/mechanical-spider-blueprint.svg",
+    "system": {
+      "description": {
+        "value": "<p>Recipe reference; GM sets cost and crafting checks.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-mechanical-spider-blueprint",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Temporal Detector Blueprint",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-detector-blueprint.svg",
+    "system": {
+      "description": {
+        "value": "<p>Recipe reference; GM sets cost and crafting checks.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "uncommon",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-temporal-detector-blueprint",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Arcane Battery Blueprint",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/arcane-battery-blueprint.svg",
+    "system": {
+      "description": {
+        "value": "<p>Recipe reference; GM sets cost and crafting checks.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "uncommon",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-arcane-battery-blueprint",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Visitor Pass",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/visitor-pass.svg",
+    "system": {
+      "description": {
+        "value": "<p>Public access credential.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-visitor-pass",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Scholar's Access Permit",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/scholar-s-access-permit.svg",
+    "system": {
+      "description": {
+        "value": "<p>Staff access, subject to verification.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-scholar-s-access-permit",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Restricted Archives Permit",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/restricted-archives-permit.svg",
+    "system": {
+      "description": {
+        "value": "<p>Restricted archive access, subject to verification.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-restricted-archives-permit",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Artifact Research Permit",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/artifact-research-permit.svg",
+    "system": {
+      "description": {
+        "value": "<p>Permits supervised examination.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-artifact-research-permit",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Library Master Key",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/library-master-key.svg",
+    "system": {
+      "description": {
+        "value": "<p>Opens designated doors at GM discretion; not automatic universal access.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-library-master-key",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Restricted Chamber Key",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/restricted-chamber-key.svg",
+    "system": {
+      "description": {
+        "value": "<p>Opens assigned restricted door.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-restricted-chamber-key",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Oswald's Study Key",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/oswald-s-study-key.svg",
+    "system": {
+      "description": {
+        "value": "<p>Opens Oswald's study if GM approves.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-oswald-s-study-key",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Librarian Uniform",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/librarian-uniform.svg",
+    "system": {
+      "description": {
+        "value": "<p>Disguise aid.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-librarian-uniform",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Scholar Guard Uniform",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/scholar-guard-uniform.svg",
+    "system": {
+      "description": {
+        "value": "<p>Disguise aid.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-scholar-guard-uniform",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Library Floor Directory",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/library-floor-directory.svg",
+    "system": {
+      "description": {
+        "value": "<p>Public room directory; no hidden routes.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-library-floor-directory",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Scholar's Notebook",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/scholar-s-notebook.svg",
+    "system": {
+      "description": {
+        "value": "<p>Notes and clues selected by GM.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-scholar-s-notebook",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Containment Control Crystal",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/containment-control-crystal.svg",
+    "system": {
+      "description": {
+        "value": "<p>Operates a containment mechanism if authorized.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "uncommon",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-containment-control-crystal",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Letters from Alternate Timelines",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/letters-from-alternate-timelines.svg",
+    "system": {
+      "description": {
+        "value": "<p>Contradictory accounts of the same event.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-letters-from-alternate-timelines",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Oswald's Research Notes",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/oswald-s-research-notes.svg",
+    "system": {
+      "description": {
+        "value": "<p>GM clue: repeated experiments and temporal consequences.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-oswald-s-research-notes",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "History of the Avatars",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/history-of-the-avatars.svg",
+    "system": {
+      "description": {
+        "value": "<p>GM chooses confirmed lore excerpts.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "common",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-history-of-the-avatars",
+        "draft": true
+      }
+    }
+  },
+  {
+    "name": "Forbidden Resurrection Manuscript",
+    "type": "loot",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/forbidden-resurrection-manuscript.svg",
+    "system": {
+      "description": {
+        "value": "<p>Forbidden theory; not a new resurrection spell.</p><p>Working encounter item; specific mechanics are GM-adjudicated unless implemented separately.</p>"
+      },
+      "quantity": 1,
+      "rarity": "rare",
+      "price": {
+        "value": 0,
+        "denomination": "gp"
+      },
+      "weight": {
+        "value": 0,
+        "units": "lb"
+      }
+    },
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-item-forbidden-resurrection-manuscript",
+        "draft": true
+      }
+    }
+  }
+]

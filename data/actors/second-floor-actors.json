@@ -1,0 +1,6352 @@
+[
+  {
+    "name": "Male Librarian",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/portraits/librarian.webp",
+    "prototypeToken": {
+      "name": "Male Librarian",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/tokens/librarian.webp",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 9
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 11
+        },
+        "int": {
+          "value": 15
+        },
+        "wis": {
+          "value": 14
+        },
+        "cha": {
+          "value": 12
+        }
+      },
+      "skills": {
+        "arc": {
+          "value": 1
+        },
+        "his": {
+          "value": 1
+        },
+        "inv": {
+          "value": 1
+        },
+        "prc": {
+          "value": 1
+        }
+      },
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 11
+        },
+        "hp": {
+          "value": 13,
+          "max": 13,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "lawful neutral",
+        "cr": 0.125,
+        "type": {
+          "value": "humanoid",
+          "subtype": "library staff"
+        },
+        "biography": {
+          "value": "<p>Catalogues public materials and offers directions.</p><p>Optional encounter actor; GM can adjust for party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": [
+            "common"
+          ]
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Letter Opener",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/icons/letter-opener.webp",
+        "system": {
+          "description": {
+            "value": "<p>Melee weapon attack: +3 to hit, reach 5 ft., 1d4+1 piercing.</p>"
+          },
+          "identifier": "letter-opener",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "@mod",
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Letter Opener",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Index of the Thousandfold",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/index-of-the-thousandfold.webp",
+        "system": {
+          "description": {
+            "value": "<p>Advantage on Intelligence (History) and (Investigation) checks concerning the library catalogue or historical manuscripts.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      },
+      {
+        "name": "Summon the Watch",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/summon-the-watch.webp",
+        "system": {
+          "description": {
+            "value": "<p>As an action, activate a hidden bell or call for a nearby scholar guard, if a guard can hear or receive the alert.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-male-librarian"
+      }
+    }
+  },
+  {
+    "name": "Female Librarian",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/portraits/librarian.webp",
+    "prototypeToken": {
+      "name": "Female Librarian",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/tokens/librarian.webp",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 9
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 11
+        },
+        "int": {
+          "value": 15
+        },
+        "wis": {
+          "value": 14
+        },
+        "cha": {
+          "value": 12
+        }
+      },
+      "skills": {
+        "arc": {
+          "value": 1
+        },
+        "his": {
+          "value": 1
+        },
+        "inv": {
+          "value": 1
+        },
+        "prc": {
+          "value": 1
+        }
+      },
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 11
+        },
+        "hp": {
+          "value": 13,
+          "max": 13,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "lawful neutral",
+        "cr": 0.125,
+        "type": {
+          "value": "humanoid",
+          "subtype": "library staff"
+        },
+        "biography": {
+          "value": "<p>Catalogues public materials and offers directions.</p><p>Optional encounter actor; GM can adjust for party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": [
+            "common"
+          ]
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Letter Opener",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/icons/letter-opener.webp",
+        "system": {
+          "description": {
+            "value": "<p>Melee weapon attack: +3 to hit, reach 5 ft., 1d4+1 piercing.</p>"
+          },
+          "identifier": "letter-opener",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "@mod",
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Letter Opener",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Index of the Thousandfold",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/index-of-the-thousandfold.webp",
+        "system": {
+          "description": {
+            "value": "<p>Advantage on Intelligence (History) and (Investigation) checks concerning the library catalogue or historical manuscripts.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      },
+      {
+        "name": "Summon the Watch",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/summon-the-watch.webp",
+        "system": {
+          "description": {
+            "value": "<p>As an action, activate a hidden bell or call for a nearby scholar guard, if a guard can hear or receive the alert.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-female-librarian"
+      }
+    }
+  },
+  {
+    "name": "Male Scholar Guard",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/portraits/scholar-guard.webp",
+    "prototypeToken": {
+      "name": "Male Scholar Guard",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/tokens/scholar-guard.webp",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 14
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 13
+        },
+        "int": {
+          "value": 12
+        },
+        "wis": {
+          "value": 14
+        },
+        "cha": {
+          "value": 10
+        }
+      },
+      "skills": {
+        "prc": {
+          "value": 1
+        },
+        "ins": {
+          "value": 1
+        },
+        "arc": {
+          "value": 1
+        }
+      },
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 16
+        },
+        "hp": {
+          "value": 27,
+          "max": 27,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "lawful neutral",
+        "cr": 1,
+        "type": {
+          "value": "humanoid",
+          "subtype": "library staff"
+        },
+        "biography": {
+          "value": "<p>Patrols the balcony; prefers nonlethal force.</p><p>Optional encounter actor; GM can adjust for party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": [
+            "common"
+          ]
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Library Halberd",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/icons/library-halberd.webp",
+        "system": {
+          "description": {
+            "value": "<p>Melee weapon attack: +4 to hit, reach 10 ft., 1d10+2 slashing.</p>"
+          },
+          "identifier": "library-halberd",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 10,
+              "bonus": "@mod",
+              "types": [
+                "slashing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Library Halberd",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "str",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 10,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Keep the Silence",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/keep-the-silence.webp",
+        "system": {
+          "description": {
+            "value": "<p>The guard signals fellow watchkeepers rather than shouting; a resonant bell in the guardhouse alerts the gate within 1 round.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      },
+      {
+        "name": "Nonlethal Training",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/nonlethal-training.webp",
+        "system": {
+          "description": {
+            "value": "<p>When reducing a creature to 0 HP with a melee attack, the guard may choose to knock the creature unconscious instead of killing it.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-male-scholar-guard"
+      }
+    }
+  },
+  {
+    "name": "Female Scholar Guard",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/portraits/scholar-guard.webp",
+    "prototypeToken": {
+      "name": "Female Scholar Guard",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/tokens/scholar-guard.webp",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 14
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 13
+        },
+        "int": {
+          "value": 12
+        },
+        "wis": {
+          "value": 14
+        },
+        "cha": {
+          "value": 10
+        }
+      },
+      "skills": {
+        "prc": {
+          "value": 1
+        },
+        "ins": {
+          "value": 1
+        },
+        "arc": {
+          "value": 1
+        }
+      },
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 16
+        },
+        "hp": {
+          "value": 27,
+          "max": 27,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "lawful neutral",
+        "cr": 1,
+        "type": {
+          "value": "humanoid",
+          "subtype": "library staff"
+        },
+        "biography": {
+          "value": "<p>Patrols the balcony; prefers nonlethal force.</p><p>Optional encounter actor; GM can adjust for party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": [
+            "common"
+          ]
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Library Halberd",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/icons/library-halberd.webp",
+        "system": {
+          "description": {
+            "value": "<p>Melee weapon attack: +4 to hit, reach 10 ft., 1d10+2 slashing.</p>"
+          },
+          "identifier": "library-halberd",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 10,
+              "bonus": "@mod",
+              "types": [
+                "slashing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Library Halberd",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "str",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 10,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Keep the Silence",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/keep-the-silence.webp",
+        "system": {
+          "description": {
+            "value": "<p>The guard signals fellow watchkeepers rather than shouting; a resonant bell in the guardhouse alerts the gate within 1 round.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      },
+      {
+        "name": "Nonlethal Training",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/nonlethal-training.webp",
+        "system": {
+          "description": {
+            "value": "<p>When reducing a creature to 0 HP with a melee attack, the guard may choose to knock the creature unconscious instead of killing it.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-female-scholar-guard"
+      }
+    }
+  },
+  {
+    "name": "Scholar Guard Captain",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/portraits/scholar-guard.webp",
+    "prototypeToken": {
+      "name": "Scholar Guard Captain",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/tokens/scholar-guard.webp",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 14
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 13
+        },
+        "int": {
+          "value": 12
+        },
+        "wis": {
+          "value": 14
+        },
+        "cha": {
+          "value": 10
+        }
+      },
+      "skills": {
+        "prc": {
+          "value": 1
+        },
+        "ins": {
+          "value": 1
+        },
+        "arc": {
+          "value": 1
+        }
+      },
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 18
+        },
+        "hp": {
+          "value": 45,
+          "max": 45,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "lawful neutral",
+        "cr": 2,
+        "type": {
+          "value": "humanoid",
+          "subtype": "library staff"
+        },
+        "biography": {
+          "value": "<p>Coordinates lockdowns; offers surrender before escalation.</p><p>Optional encounter actor; GM can adjust for party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": [
+            "common"
+          ]
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Library Halberd",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/icons/library-halberd.webp",
+        "system": {
+          "description": {
+            "value": "<p>Melee weapon attack: +4 to hit, reach 10 ft., 1d10+2 slashing.</p>"
+          },
+          "identifier": "library-halberd",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 10,
+              "bonus": "@mod",
+              "types": [
+                "slashing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Library Halberd",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "str",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 10,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Keep the Silence",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/keep-the-silence.webp",
+        "system": {
+          "description": {
+            "value": "<p>The guard signals fellow watchkeepers rather than shouting; a resonant bell in the guardhouse alerts the gate within 1 round.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      },
+      {
+        "name": "Nonlethal Training",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/nonlethal-training.webp",
+        "system": {
+          "description": {
+            "value": "<p>When reducing a creature to 0 HP with a melee attack, the guard may choose to knock the creature unconscious instead of killing it.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-scholar-guard-captain"
+      }
+    }
+  },
+  {
+    "name": "Restricted Archivist",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/portraits/librarian.webp",
+    "prototypeToken": {
+      "name": "Restricted Archivist",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/tokens/librarian.webp",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 9
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 11
+        },
+        "int": {
+          "value": 15
+        },
+        "wis": {
+          "value": 14
+        },
+        "cha": {
+          "value": 12
+        }
+      },
+      "skills": {
+        "arc": {
+          "value": 1
+        },
+        "his": {
+          "value": 1
+        },
+        "inv": {
+          "value": 1
+        },
+        "prc": {
+          "value": 1
+        }
+      },
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 11
+        },
+        "hp": {
+          "value": 13,
+          "max": 13,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "lawful neutral",
+        "cr": 0.125,
+        "type": {
+          "value": "humanoid",
+          "subtype": "library staff"
+        },
+        "biography": {
+          "value": "<p>Controls access; can identify a forbidden manuscript.</p><p>Optional encounter actor; GM can adjust for party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": [
+            "common"
+          ]
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Letter Opener",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/icons/letter-opener.webp",
+        "system": {
+          "description": {
+            "value": "<p>Melee weapon attack: +3 to hit, reach 5 ft., 1d4+1 piercing.</p>"
+          },
+          "identifier": "letter-opener",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "@mod",
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Letter Opener",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Index of the Thousandfold",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/index-of-the-thousandfold.webp",
+        "system": {
+          "description": {
+            "value": "<p>Advantage on Intelligence (History) and (Investigation) checks concerning the library catalogue or historical manuscripts.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      },
+      {
+        "name": "Summon the Watch",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/summon-the-watch.webp",
+        "system": {
+          "description": {
+            "value": "<p>As an action, activate a hidden bell or call for a nearby scholar guard, if a guard can hear or receive the alert.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-restricted-archivist"
+      }
+    }
+  },
+  {
+    "name": "Artifact Curator",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/portraits/librarian.webp",
+    "prototypeToken": {
+      "name": "Artifact Curator",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/tokens/librarian.webp",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 9
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 11
+        },
+        "int": {
+          "value": 15
+        },
+        "wis": {
+          "value": 14
+        },
+        "cha": {
+          "value": 12
+        }
+      },
+      "skills": {
+        "arc": {
+          "value": 1
+        },
+        "his": {
+          "value": 1
+        },
+        "inv": {
+          "value": 1
+        },
+        "prc": {
+          "value": 1
+        }
+      },
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 11
+        },
+        "hp": {
+          "value": 13,
+          "max": 13,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "lawful neutral",
+        "cr": 0.125,
+        "type": {
+          "value": "humanoid",
+          "subtype": "library staff"
+        },
+        "biography": {
+          "value": "<p>Explains exhibits and containment precautions.</p><p>Optional encounter actor; GM can adjust for party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": [
+            "common"
+          ]
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Letter Opener",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/icons/letter-opener.webp",
+        "system": {
+          "description": {
+            "value": "<p>Melee weapon attack: +3 to hit, reach 5 ft., 1d4+1 piercing.</p>"
+          },
+          "identifier": "letter-opener",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "@mod",
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Letter Opener",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Index of the Thousandfold",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/index-of-the-thousandfold.webp",
+        "system": {
+          "description": {
+            "value": "<p>Advantage on Intelligence (History) and (Investigation) checks concerning the library catalogue or historical manuscripts.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      },
+      {
+        "name": "Summon the Watch",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/summon-the-watch.webp",
+        "system": {
+          "description": {
+            "value": "<p>As an action, activate a hidden bell or call for a nearby scholar guard, if a guard can hear or receive the alert.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-artifact-curator"
+      }
+    }
+  },
+  {
+    "name": "Arcane Researcher",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/portraits/librarian.webp",
+    "prototypeToken": {
+      "name": "Arcane Researcher",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/tokens/librarian.webp",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 9
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 11
+        },
+        "int": {
+          "value": 15
+        },
+        "wis": {
+          "value": 14
+        },
+        "cha": {
+          "value": 12
+        }
+      },
+      "skills": {
+        "arc": {
+          "value": 1
+        },
+        "his": {
+          "value": 1
+        },
+        "inv": {
+          "value": 1
+        },
+        "prc": {
+          "value": 1
+        }
+      },
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 11
+        },
+        "hp": {
+          "value": 13,
+          "max": 13,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "lawful neutral",
+        "cr": 0.125,
+        "type": {
+          "value": "humanoid",
+          "subtype": "library staff"
+        },
+        "biography": {
+          "value": "<p>Offers experimental equipment and crafting rewards.</p><p>Optional encounter actor; GM can adjust for party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": [
+            "common"
+          ]
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Letter Opener",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/icons/letter-opener.webp",
+        "system": {
+          "description": {
+            "value": "<p>Melee weapon attack: +3 to hit, reach 5 ft., 1d4+1 piercing.</p>"
+          },
+          "identifier": "letter-opener",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "@mod",
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Letter Opener",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Index of the Thousandfold",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/index-of-the-thousandfold.webp",
+        "system": {
+          "description": {
+            "value": "<p>Advantage on Intelligence (History) and (Investigation) checks concerning the library catalogue or historical manuscripts.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      },
+      {
+        "name": "Summon the Watch",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/summon-the-watch.webp",
+        "system": {
+          "description": {
+            "value": "<p>As an action, activate a hidden bell or call for a nearby scholar guard, if a guard can hear or receive the alert.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-arcane-researcher"
+      }
+    }
+  },
+  {
+    "name": "Temporal Researcher",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/portraits/librarian.webp",
+    "prototypeToken": {
+      "name": "Temporal Researcher",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/tokens/librarian.webp",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 9
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 11
+        },
+        "int": {
+          "value": 15
+        },
+        "wis": {
+          "value": 14
+        },
+        "cha": {
+          "value": 12
+        }
+      },
+      "skills": {
+        "arc": {
+          "value": 1
+        },
+        "his": {
+          "value": 1
+        },
+        "inv": {
+          "value": 1
+        },
+        "prc": {
+          "value": 1
+        }
+      },
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 11
+        },
+        "hp": {
+          "value": 13,
+          "max": 13,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "lawful neutral",
+        "cr": 0.125,
+        "type": {
+          "value": "humanoid",
+          "subtype": "library staff"
+        },
+        "biography": {
+          "value": "<p>Explains stolen minutes without revealing Oswald's secret.</p><p>Optional encounter actor; GM can adjust for party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": [
+            "common"
+          ]
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Letter Opener",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/icons/letter-opener.webp",
+        "system": {
+          "description": {
+            "value": "<p>Melee weapon attack: +3 to hit, reach 5 ft., 1d4+1 piercing.</p>"
+          },
+          "identifier": "letter-opener",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "@mod",
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Letter Opener",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Index of the Thousandfold",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/index-of-the-thousandfold.webp",
+        "system": {
+          "description": {
+            "value": "<p>Advantage on Intelligence (History) and (Investigation) checks concerning the library catalogue or historical manuscripts.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      },
+      {
+        "name": "Summon the Watch",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/summon-the-watch.webp",
+        "system": {
+          "description": {
+            "value": "<p>As an action, activate a hidden bell or call for a nearby scholar guard, if a guard can hear or receive the alert.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-temporal-researcher"
+      }
+    }
+  },
+  {
+    "name": "Mirror Supervisor",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/portraits/librarian.webp",
+    "prototypeToken": {
+      "name": "Mirror Supervisor",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/tokens/librarian.webp",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 9
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 11
+        },
+        "int": {
+          "value": 15
+        },
+        "wis": {
+          "value": 14
+        },
+        "cha": {
+          "value": 12
+        }
+      },
+      "skills": {
+        "arc": {
+          "value": 1
+        },
+        "his": {
+          "value": 1
+        },
+        "inv": {
+          "value": 1
+        },
+        "prc": {
+          "value": 1
+        }
+      },
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 11
+        },
+        "hp": {
+          "value": 13,
+          "max": 13,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "lawful neutral",
+        "cr": 0.125,
+        "type": {
+          "value": "humanoid",
+          "subtype": "library staff"
+        },
+        "biography": {
+          "value": "<p>Warns visitors against touching mirrors.</p><p>Optional encounter actor; GM can adjust for party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": [
+            "common"
+          ]
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Letter Opener",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/icons/letter-opener.webp",
+        "system": {
+          "description": {
+            "value": "<p>Melee weapon attack: +3 to hit, reach 5 ft., 1d4+1 piercing.</p>"
+          },
+          "identifier": "letter-opener",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "@mod",
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Letter Opener",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Index of the Thousandfold",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/index-of-the-thousandfold.webp",
+        "system": {
+          "description": {
+            "value": "<p>Advantage on Intelligence (History) and (Investigation) checks concerning the library catalogue or historical manuscripts.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      },
+      {
+        "name": "Summon the Watch",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/summon-the-watch.webp",
+        "system": {
+          "description": {
+            "value": "<p>As an action, activate a hidden bell or call for a nearby scholar guard, if a guard can hear or receive the alert.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-mirror-supervisor"
+      }
+    }
+  },
+  {
+    "name": "Junior Scholar",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/portraits/librarian.webp",
+    "prototypeToken": {
+      "name": "Junior Scholar",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/tokens/librarian.webp",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 9
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 11
+        },
+        "int": {
+          "value": 15
+        },
+        "wis": {
+          "value": 14
+        },
+        "cha": {
+          "value": 12
+        }
+      },
+      "skills": {
+        "arc": {
+          "value": 1
+        },
+        "his": {
+          "value": 1
+        },
+        "inv": {
+          "value": 1
+        },
+        "prc": {
+          "value": 1
+        }
+      },
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 11
+        },
+        "hp": {
+          "value": 13,
+          "max": 13,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "lawful neutral",
+        "cr": 0.125,
+        "type": {
+          "value": "humanoid",
+          "subtype": "library staff"
+        },
+        "biography": {
+          "value": "<p>Knows mundane rumors.</p><p>Optional encounter actor; GM can adjust for party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": [
+            "common"
+          ]
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Letter Opener",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/icons/letter-opener.webp",
+        "system": {
+          "description": {
+            "value": "<p>Melee weapon attack: +3 to hit, reach 5 ft., 1d4+1 piercing.</p>"
+          },
+          "identifier": "letter-opener",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "@mod",
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Letter Opener",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Index of the Thousandfold",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/index-of-the-thousandfold.webp",
+        "system": {
+          "description": {
+            "value": "<p>Advantage on Intelligence (History) and (Investigation) checks concerning the library catalogue or historical manuscripts.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      },
+      {
+        "name": "Summon the Watch",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/summon-the-watch.webp",
+        "system": {
+          "description": {
+            "value": "<p>As an action, activate a hidden bell or call for a nearby scholar guard, if a guard can hear or receive the alert.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-junior-scholar"
+      }
+    }
+  },
+  {
+    "name": "Elderly Librarian",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/portraits/librarian.webp",
+    "prototypeToken": {
+      "name": "Elderly Librarian",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/tokens/librarian.webp",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 9
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 11
+        },
+        "int": {
+          "value": 15
+        },
+        "wis": {
+          "value": 14
+        },
+        "cha": {
+          "value": 12
+        }
+      },
+      "skills": {
+        "arc": {
+          "value": 1
+        },
+        "his": {
+          "value": 1
+        },
+        "inv": {
+          "value": 1
+        },
+        "prc": {
+          "value": 1
+        }
+      },
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 11
+        },
+        "hp": {
+          "value": 13,
+          "max": 13,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "lawful neutral",
+        "cr": 0.125,
+        "type": {
+          "value": "humanoid",
+          "subtype": "library staff"
+        },
+        "biography": {
+          "value": "<p>Possible alternate timeline of a librarian.</p><p>Optional encounter actor; GM can adjust for party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": [
+            "common"
+          ]
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Letter Opener",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/icons/letter-opener.webp",
+        "system": {
+          "description": {
+            "value": "<p>Melee weapon attack: +3 to hit, reach 5 ft., 1d4+1 piercing.</p>"
+          },
+          "identifier": "letter-opener",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "@mod",
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Letter Opener",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Index of the Thousandfold",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/index-of-the-thousandfold.webp",
+        "system": {
+          "description": {
+            "value": "<p>Advantage on Intelligence (History) and (Investigation) checks concerning the library catalogue or historical manuscripts.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      },
+      {
+        "name": "Summon the Watch",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/summon-the-watch.webp",
+        "system": {
+          "description": {
+            "value": "<p>As an action, activate a hidden bell or call for a nearby scholar guard, if a guard can hear or receive the alert.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-elderly-librarian"
+      }
+    }
+  },
+  {
+    "name": "Maintenance Worker",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/portraits/librarian.webp",
+    "prototypeToken": {
+      "name": "Maintenance Worker",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/tokens/librarian.webp",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 9
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 11
+        },
+        "int": {
+          "value": 15
+        },
+        "wis": {
+          "value": 14
+        },
+        "cha": {
+          "value": 12
+        }
+      },
+      "skills": {
+        "arc": {
+          "value": 1
+        },
+        "his": {
+          "value": 1
+        },
+        "inv": {
+          "value": 1
+        },
+        "prc": {
+          "value": 1
+        }
+      },
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 11
+        },
+        "hp": {
+          "value": 13,
+          "max": 13,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "lawful neutral",
+        "cr": 0.125,
+        "type": {
+          "value": "humanoid",
+          "subtype": "library staff"
+        },
+        "biography": {
+          "value": "<p>Maintains elevator and clockwork devices.</p><p>Optional encounter actor; GM can adjust for party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": [
+            "common"
+          ]
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Letter Opener",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/icons/letter-opener.webp",
+        "system": {
+          "description": {
+            "value": "<p>Melee weapon attack: +3 to hit, reach 5 ft., 1d4+1 piercing.</p>"
+          },
+          "identifier": "letter-opener",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "@mod",
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Letter Opener",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Index of the Thousandfold",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/index-of-the-thousandfold.webp",
+        "system": {
+          "description": {
+            "value": "<p>Advantage on Intelligence (History) and (Investigation) checks concerning the library catalogue or historical manuscripts.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      },
+      {
+        "name": "Summon the Watch",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/summon-the-watch.webp",
+        "system": {
+          "description": {
+            "value": "<p>As an action, activate a hidden bell or call for a nearby scholar guard, if a guard can hear or receive the alert.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-maintenance-worker"
+      }
+    }
+  },
+  {
+    "name": "Artifact Thief",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/portraits/scholar-guard.webp",
+    "prototypeToken": {
+      "name": "Artifact Thief",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/tokens/scholar-guard.webp",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 14
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 13
+        },
+        "int": {
+          "value": 12
+        },
+        "wis": {
+          "value": 14
+        },
+        "cha": {
+          "value": 10
+        }
+      },
+      "skills": {
+        "prc": {
+          "value": 1
+        },
+        "ins": {
+          "value": 1
+        },
+        "arc": {
+          "value": 1
+        }
+      },
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 13
+        },
+        "hp": {
+          "value": 22,
+          "max": 22,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "lawful neutral",
+        "cr": 0.5,
+        "type": {
+          "value": "humanoid",
+          "subtype": "library staff"
+        },
+        "biography": {
+          "value": "<p>Attempts a discreet theft; flees if exposed.</p><p>Optional encounter actor; GM can adjust for party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": [
+            "common"
+          ]
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Library Halberd",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/icons/library-halberd.webp",
+        "system": {
+          "description": {
+            "value": "<p>Melee weapon attack: +4 to hit, reach 10 ft., 1d10+2 slashing.</p>"
+          },
+          "identifier": "library-halberd",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 10,
+              "bonus": "@mod",
+              "types": [
+                "slashing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Library Halberd",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "str",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 10,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Keep the Silence",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/keep-the-silence.webp",
+        "system": {
+          "description": {
+            "value": "<p>The guard signals fellow watchkeepers rather than shouting; a resonant bell in the guardhouse alerts the gate within 1 round.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      },
+      {
+        "name": "Nonlethal Training",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/nonlethal-training.webp",
+        "system": {
+          "description": {
+            "value": "<p>When reducing a creature to 0 HP with a melee attack, the guard may choose to knock the creature unconscious instead of killing it.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-artifact-thief"
+      }
+    }
+  },
+  {
+    "name": "Artifact Thief Leader",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/portraits/scholar-guard.webp",
+    "prototypeToken": {
+      "name": "Artifact Thief Leader",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/tokens/scholar-guard.webp",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 14
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 13
+        },
+        "int": {
+          "value": 12
+        },
+        "wis": {
+          "value": 14
+        },
+        "cha": {
+          "value": 10
+        }
+      },
+      "skills": {
+        "prc": {
+          "value": 1
+        },
+        "ins": {
+          "value": 1
+        },
+        "arc": {
+          "value": 1
+        }
+      },
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 15
+        },
+        "hp": {
+          "value": 45,
+          "max": 45,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "lawful neutral",
+        "cr": 2,
+        "type": {
+          "value": "humanoid",
+          "subtype": "library staff"
+        },
+        "biography": {
+          "value": "<p>Coordinates diversion and escape.</p><p>Optional encounter actor; GM can adjust for party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": [
+            "common"
+          ]
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Library Halberd",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/icons/library-halberd.webp",
+        "system": {
+          "description": {
+            "value": "<p>Melee weapon attack: +4 to hit, reach 10 ft., 1d10+2 slashing.</p>"
+          },
+          "identifier": "library-halberd",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 10,
+              "bonus": "@mod",
+              "types": [
+                "slashing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Library Halberd",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "str",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 10,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Keep the Silence",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/keep-the-silence.webp",
+        "system": {
+          "description": {
+            "value": "<p>The guard signals fellow watchkeepers rather than shouting; a resonant bell in the guardhouse alerts the gate within 1 round.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      },
+      {
+        "name": "Nonlethal Training",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/icons/nonlethal-training.webp",
+        "system": {
+          "description": {
+            "value": "<p>When reducing a creature to 0 HP with a melee attack, the guard may choose to knock the creature unconscious instead of killing it.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-artifact-thief-leader"
+      }
+    }
+  },
+  {
+    "name": "Animated Book",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/animated-book.svg",
+    "prototypeToken": {
+      "name": "Animated Book",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/animated-book.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": -1,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 8
+        },
+        "dex": {
+          "value": 14
+        },
+        "con": {
+          "value": 12
+        },
+        "int": {
+          "value": 3
+        },
+        "wis": {
+          "value": 10
+        },
+        "cha": {
+          "value": 5
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 13
+        },
+        "hp": {
+          "value": 12,
+          "max": 12,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 0,
+          "fly": 30,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 0.25,
+        "type": {
+          "value": "construct",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Optional library encounter. Once per encounter, one creature within 5 ft makes a DC 11 Dexterity save or is blinded until the start of the book's next turn.</p><p>Suggested CR 0.25; adjust HP and numbers to party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "tiny",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Paper Cut",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/animated-book.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 1d4 plus ability modifier slashing damage.</p>"
+          },
+          "identifier": "paper-cut",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "@mod",
+              "types": [
+                "slashing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Paper Cut",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Blinding Pages",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/animated-book.svg",
+        "system": {
+          "description": {
+            "value": "<p>Once per encounter, one creature within 5 ft makes a DC 11 Dexterity save or is blinded until the start of the book's next turn.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-animated-book"
+      }
+    }
+  },
+  {
+    "name": "Swarm of Animated Books",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/swarm-of-animated-books.svg",
+    "prototypeToken": {
+      "name": "Swarm of Animated Books",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/swarm-of-animated-books.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": -1,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 10
+        },
+        "dex": {
+          "value": 14
+        },
+        "con": {
+          "value": 13
+        },
+        "int": {
+          "value": 4
+        },
+        "wis": {
+          "value": 10
+        },
+        "cha": {
+          "value": 5
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 13
+        },
+        "hp": {
+          "value": 36,
+          "max": 36,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 10,
+          "fly": 30,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 1,
+        "type": {
+          "value": "construct",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Optional library encounter. Can occupy another creature's space; half damage dice when at or below half HP.</p><p>Suggested CR 1; adjust HP and numbers to party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Paper Storm",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/swarm-of-animated-books.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 2d6 plus ability modifier slashing damage.</p>"
+          },
+          "identifier": "paper-storm",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 2,
+              "denomination": 6,
+              "bonus": "@mod",
+              "types": [
+                "slashing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Paper Storm",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Swarm",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/swarm-of-animated-books.svg",
+        "system": {
+          "description": {
+            "value": "<p>Can occupy another creature's space; half damage dice when at or below half HP.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-swarm-of-animated-books"
+      }
+    }
+  },
+  {
+    "name": "Hungry Book",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/hungry-book.svg",
+    "prototypeToken": {
+      "name": "Hungry Book",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/hungry-book.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": -1,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 14
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 15
+        },
+        "int": {
+          "value": 8
+        },
+        "wis": {
+          "value": 12
+        },
+        "cha": {
+          "value": 8
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 14
+        },
+        "hp": {
+          "value": 52,
+          "max": 52,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 20,
+          "fly": 0,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 2,
+        "type": {
+          "value": "monstrosity",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Optional library encounter. Action: drains an unattended document within 10 ft. A creature holding it can prevent the loss with a DC 13 Strength save.</p><p>Suggested CR 2; adjust HP and numbers to party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "small",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Ink Tendril",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/hungry-book.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 2d8 plus ability modifier necrotic damage.</p>"
+          },
+          "identifier": "ink-tendril",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 2,
+              "denomination": 8,
+              "bonus": "@mod",
+              "types": [
+                "necrotic"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Ink Tendril",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "str",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Consume Writing",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/hungry-book.svg",
+        "system": {
+          "description": {
+            "value": "<p>Action: drains an unattended document within 10 ft. A creature holding it can prevent the loss with a DC 13 Strength save.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-hungry-book"
+      }
+    }
+  },
+  {
+    "name": "Parchment Golem",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/parchment-golem.svg",
+    "prototypeToken": {
+      "name": "Parchment Golem",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/parchment-golem.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 2,
+      "height": 2,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": -1,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 16
+        },
+        "dex": {
+          "value": 10
+        },
+        "con": {
+          "value": 16
+        },
+        "int": {
+          "value": 5
+        },
+        "wis": {
+          "value": 10
+        },
+        "cha": {
+          "value": 5
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 15
+        },
+        "hp": {
+          "value": 68,
+          "max": 68,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 25,
+          "fly": 0,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 3,
+        "type": {
+          "value": "construct",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Optional library encounter. Once per encounter, target within 15 ft makes DC 13 Dexterity save or is restrained until it or an ally uses an action to free it.</p><p>Suggested CR 3; adjust HP and numbers to party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "lg",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Binding Scroll",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/parchment-golem.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 2d8 plus ability modifier bludgeoning damage.</p>"
+          },
+          "identifier": "binding-scroll",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 2,
+              "denomination": 8,
+              "bonus": "@mod",
+              "types": [
+                "bludgeoning"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Binding Scroll",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "str",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Binding Pages",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/parchment-golem.svg",
+        "system": {
+          "description": {
+            "value": "<p>Once per encounter, target within 15 ft makes DC 13 Dexterity save or is restrained until it or an ally uses an action to free it.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-parchment-golem"
+      }
+    }
+  },
+  {
+    "name": "Mechanical Bookkeeper",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/mechanical-bookkeeper.svg",
+    "prototypeToken": {
+      "name": "Mechanical Bookkeeper",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/mechanical-bookkeeper.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": -1,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 6
+        },
+        "dex": {
+          "value": 16
+        },
+        "con": {
+          "value": 12
+        },
+        "int": {
+          "value": 5
+        },
+        "wis": {
+          "value": 12
+        },
+        "cha": {
+          "value": 6
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 13
+        },
+        "hp": {
+          "value": 10,
+          "max": 10,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "fly": 0,
+          "climb": 30,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 0.125,
+        "type": {
+          "value": "construct",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Optional library encounter. Can carry an unattended Tiny object; use a contested Dexterity check for a held object. Climb speed 30 ft.</p><p>Suggested CR 0.125; adjust HP and numbers to party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "tiny",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Pinch",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/mechanical-bookkeeper.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 1d4 plus ability modifier piercing damage.</p>"
+          },
+          "identifier": "pinch",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 1,
+              "denomination": 4,
+              "bonus": "@mod",
+              "types": [
+                "piercing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Pinch",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Retrieve Object",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/mechanical-bookkeeper.svg",
+        "system": {
+          "description": {
+            "value": "<p>Can carry an unattended Tiny object; use a contested Dexterity check for a held object. Climb speed 30 ft.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-mechanical-bookkeeper"
+      }
+    }
+  },
+  {
+    "name": "Experimental Arcane Construct",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/experimental-arcane-construct.svg",
+    "prototypeToken": {
+      "name": "Experimental Arcane Construct",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/experimental-arcane-construct.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": -1,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 16
+        },
+        "dex": {
+          "value": 12
+        },
+        "con": {
+          "value": 14
+        },
+        "int": {
+          "value": 5
+        },
+        "wis": {
+          "value": 10
+        },
+        "cha": {
+          "value": 6
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 15
+        },
+        "hp": {
+          "value": 52,
+          "max": 52,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 25,
+          "fly": 0,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 2,
+        "type": {
+          "value": "construct",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Optional library encounter. Once per encounter, creatures within 10 ft make DC 13 Dexterity save or take 2d6 lightning damage (half on success).</p><p>Suggested CR 2; adjust HP and numbers to party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Arcane Slam",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/experimental-arcane-construct.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 2d8 plus ability modifier force damage.</p>"
+          },
+          "identifier": "arcane-slam",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 2,
+              "denomination": 8,
+              "bonus": "@mod",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Arcane Slam",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "str",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Overload",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/experimental-arcane-construct.svg",
+        "system": {
+          "description": {
+            "value": "<p>Once per encounter, creatures within 10 ft make DC 13 Dexterity save or take 2d6 lightning damage (half on success).</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-experimental-arcane-construct"
+      }
+    }
+  },
+  {
+    "name": "Mirror Entity",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/mirror-entity.svg",
+    "prototypeToken": {
+      "name": "Mirror Entity",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/mirror-entity.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": -1,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 12
+        },
+        "dex": {
+          "value": 16
+        },
+        "con": {
+          "value": 14
+        },
+        "int": {
+          "value": 10
+        },
+        "wis": {
+          "value": 12
+        },
+        "cha": {
+          "value": 10
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 14
+        },
+        "hp": {
+          "value": 42,
+          "max": 42,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "fly": 0,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 2,
+        "type": {
+          "value": "aberration",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Optional library encounter. Once per round, GM may imitate a simple action taken by a nearby creature; no spell slot or class-feature duplication.</p><p>Suggested CR 2; adjust HP and numbers to party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Glass Strike",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/mirror-entity.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 2d6 plus ability modifier slashing damage.</p>"
+          },
+          "identifier": "glass-strike",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 2,
+              "denomination": 6,
+              "bonus": "@mod",
+              "types": [
+                "slashing"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Glass Strike",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Mimic Action",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/mirror-entity.svg",
+        "system": {
+          "description": {
+            "value": "<p>Once per round, GM may imitate a simple action taken by a nearby creature; no spell slot or class-feature duplication.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-mirror-entity"
+      }
+    }
+  },
+  {
+    "name": "Temporal Echo",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+    "prototypeToken": {
+      "name": "Temporal Echo",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": -1,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 10
+        },
+        "dex": {
+          "value": 14
+        },
+        "con": {
+          "value": 12
+        },
+        "int": {
+          "value": 10
+        },
+        "wis": {
+          "value": 12
+        },
+        "cha": {
+          "value": 10
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 13
+        },
+        "hp": {
+          "value": 27,
+          "max": 27,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "fly": 0,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 1,
+        "type": {
+          "value": "aberration",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Optional library encounter. Bonus action: teleport up to 15 ft to an unoccupied visible space, once per encounter.</p><p>Suggested CR 1; adjust HP and numbers to party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Temporal Touch",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 2d6 plus ability modifier force damage.</p>"
+          },
+          "identifier": "temporal-touch",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 2,
+              "denomination": 6,
+              "bonus": "@mod",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Temporal Touch",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Flicker",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Bonus action: teleport up to 15 ft to an unoccupied visible space, once per encounter.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-temporal-echo"
+      }
+    }
+  },
+  {
+    "name": "Artifact Sentinel",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/artifact-sentinel.svg",
+    "prototypeToken": {
+      "name": "Artifact Sentinel",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/artifact-sentinel.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 2,
+      "height": 2,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": -1,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 18
+        },
+        "dex": {
+          "value": 10
+        },
+        "con": {
+          "value": 16
+        },
+        "int": {
+          "value": 6
+        },
+        "wis": {
+          "value": 12
+        },
+        "cha": {
+          "value": 5
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 17
+        },
+        "hp": {
+          "value": 85,
+          "max": 85,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 25,
+          "fly": 0,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 4,
+        "type": {
+          "value": "construct",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Optional library encounter. Once per encounter, creatures within 10 ft make DC 14 Strength save or are restrained until end of next turn.</p><p>Suggested CR 4; adjust HP and numbers to party level.</p>"
+        }
+      },
+      "traits": {
+        "size": "lg",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Sentinel Slam",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/artifact-sentinel.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 2d8 plus ability modifier bludgeoning damage.</p>"
+          },
+          "identifier": "sentinel-slam",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 2,
+              "denomination": 8,
+              "bonus": "@mod",
+              "types": [
+                "bludgeoning"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Sentinel Slam",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "str",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Restraining Field",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/artifact-sentinel.svg",
+        "system": {
+          "description": {
+            "value": "<p>Once per encounter, creatures within 10 ft make DC 14 Strength save or are restrained until end of next turn.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-artifact-sentinel"
+      }
+    }
+  },
+  {
+    "name": "Alternate Lyla Longember",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+    "prototypeToken": {
+      "name": "Alternate Lyla Longember",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 10
+        },
+        "dex": {
+          "value": 14
+        },
+        "con": {
+          "value": 12
+        },
+        "int": {
+          "value": 10
+        },
+        "wis": {
+          "value": 12
+        },
+        "cha": {
+          "value": 10
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 13
+        },
+        "hp": {
+          "value": 27,
+          "max": 27,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "fly": 0,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 1,
+        "type": {
+          "value": "aberration",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Generic narrative echo placeholder. Replace art and tailor abilities from the real PC with GM approval; this does not copy or modify the player character.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Temporal Touch",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 2d6 plus ability modifier force damage.</p>"
+          },
+          "identifier": "temporal-touch",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 2,
+              "denomination": 6,
+              "bonus": "@mod",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Temporal Touch",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Flicker",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Bonus action: teleport up to 15 ft to an unoccupied visible space, once per encounter.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-alternate-lyla-longember",
+        "placeholder": true
+      }
+    }
+  },
+  {
+    "name": "Future Lyla Longember",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+    "prototypeToken": {
+      "name": "Future Lyla Longember",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 10
+        },
+        "dex": {
+          "value": 14
+        },
+        "con": {
+          "value": 12
+        },
+        "int": {
+          "value": 10
+        },
+        "wis": {
+          "value": 12
+        },
+        "cha": {
+          "value": 10
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 13
+        },
+        "hp": {
+          "value": 27,
+          "max": 27,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "fly": 0,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 1,
+        "type": {
+          "value": "aberration",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Generic narrative echo placeholder. Replace art and tailor abilities from the real PC with GM approval; this does not copy or modify the player character.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Temporal Touch",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 2d6 plus ability modifier force damage.</p>"
+          },
+          "identifier": "temporal-touch",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 2,
+              "denomination": 6,
+              "bonus": "@mod",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Temporal Touch",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Flicker",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Bonus action: teleport up to 15 ft to an unoccupied visible space, once per encounter.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-future-lyla-longember",
+        "placeholder": true
+      }
+    }
+  },
+  {
+    "name": "Alternate Jeffian Xal",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+    "prototypeToken": {
+      "name": "Alternate Jeffian Xal",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 10
+        },
+        "dex": {
+          "value": 14
+        },
+        "con": {
+          "value": 12
+        },
+        "int": {
+          "value": 10
+        },
+        "wis": {
+          "value": 12
+        },
+        "cha": {
+          "value": 10
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 13
+        },
+        "hp": {
+          "value": 27,
+          "max": 27,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "fly": 0,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 1,
+        "type": {
+          "value": "aberration",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Generic narrative echo placeholder. Replace art and tailor abilities from the real PC with GM approval; this does not copy or modify the player character.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Temporal Touch",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 2d6 plus ability modifier force damage.</p>"
+          },
+          "identifier": "temporal-touch",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 2,
+              "denomination": 6,
+              "bonus": "@mod",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Temporal Touch",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Flicker",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Bonus action: teleport up to 15 ft to an unoccupied visible space, once per encounter.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-alternate-jeffian-xal",
+        "placeholder": true
+      }
+    }
+  },
+  {
+    "name": "Future Jeffian Xal",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+    "prototypeToken": {
+      "name": "Future Jeffian Xal",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 10
+        },
+        "dex": {
+          "value": 14
+        },
+        "con": {
+          "value": 12
+        },
+        "int": {
+          "value": 10
+        },
+        "wis": {
+          "value": 12
+        },
+        "cha": {
+          "value": 10
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 13
+        },
+        "hp": {
+          "value": 27,
+          "max": 27,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "fly": 0,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 1,
+        "type": {
+          "value": "aberration",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Generic narrative echo placeholder. Replace art and tailor abilities from the real PC with GM approval; this does not copy or modify the player character.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Temporal Touch",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 2d6 plus ability modifier force damage.</p>"
+          },
+          "identifier": "temporal-touch",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 2,
+              "denomination": 6,
+              "bonus": "@mod",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Temporal Touch",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Flicker",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Bonus action: teleport up to 15 ft to an unoccupied visible space, once per encounter.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-future-jeffian-xal",
+        "placeholder": true
+      }
+    }
+  },
+  {
+    "name": "Alternate Spark Ironstar",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+    "prototypeToken": {
+      "name": "Alternate Spark Ironstar",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 10
+        },
+        "dex": {
+          "value": 14
+        },
+        "con": {
+          "value": 12
+        },
+        "int": {
+          "value": 10
+        },
+        "wis": {
+          "value": 12
+        },
+        "cha": {
+          "value": 10
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 13
+        },
+        "hp": {
+          "value": 27,
+          "max": 27,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "fly": 0,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 1,
+        "type": {
+          "value": "aberration",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Generic narrative echo placeholder. Replace art and tailor abilities from the real PC with GM approval; this does not copy or modify the player character.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Temporal Touch",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 2d6 plus ability modifier force damage.</p>"
+          },
+          "identifier": "temporal-touch",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 2,
+              "denomination": 6,
+              "bonus": "@mod",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Temporal Touch",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Flicker",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Bonus action: teleport up to 15 ft to an unoccupied visible space, once per encounter.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-alternate-spark-ironstar",
+        "placeholder": true
+      }
+    }
+  },
+  {
+    "name": "Future Spark Ironstar",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+    "prototypeToken": {
+      "name": "Future Spark Ironstar",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 10
+        },
+        "dex": {
+          "value": 14
+        },
+        "con": {
+          "value": 12
+        },
+        "int": {
+          "value": 10
+        },
+        "wis": {
+          "value": 12
+        },
+        "cha": {
+          "value": 10
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 13
+        },
+        "hp": {
+          "value": 27,
+          "max": 27,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "fly": 0,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 1,
+        "type": {
+          "value": "aberration",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Generic narrative echo placeholder. Replace art and tailor abilities from the real PC with GM approval; this does not copy or modify the player character.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Temporal Touch",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 2d6 plus ability modifier force damage.</p>"
+          },
+          "identifier": "temporal-touch",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 2,
+              "denomination": 6,
+              "bonus": "@mod",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Temporal Touch",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Flicker",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Bonus action: teleport up to 15 ft to an unoccupied visible space, once per encounter.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-future-spark-ironstar",
+        "placeholder": true
+      }
+    }
+  },
+  {
+    "name": "Alternate Cedric the Wildcard",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+    "prototypeToken": {
+      "name": "Alternate Cedric the Wildcard",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 10
+        },
+        "dex": {
+          "value": 14
+        },
+        "con": {
+          "value": 12
+        },
+        "int": {
+          "value": 10
+        },
+        "wis": {
+          "value": 12
+        },
+        "cha": {
+          "value": 10
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 13
+        },
+        "hp": {
+          "value": 27,
+          "max": 27,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "fly": 0,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 1,
+        "type": {
+          "value": "aberration",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Generic narrative echo placeholder. Replace art and tailor abilities from the real PC with GM approval; this does not copy or modify the player character.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Temporal Touch",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 2d6 plus ability modifier force damage.</p>"
+          },
+          "identifier": "temporal-touch",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 2,
+              "denomination": 6,
+              "bonus": "@mod",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Temporal Touch",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Flicker",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Bonus action: teleport up to 15 ft to an unoccupied visible space, once per encounter.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-alternate-cedric-the-wildcard",
+        "placeholder": true
+      }
+    }
+  },
+  {
+    "name": "Future Cedric the Wildcard",
+    "type": "npc",
+    "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+    "prototypeToken": {
+      "name": "Future Cedric the Wildcard",
+      "texture": {
+        "src": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "scaleX": 1,
+        "scaleY": 1
+      },
+      "width": 1,
+      "height": 1,
+      "alpha": 1,
+      "displayName": 20,
+      "displayBars": 20,
+      "disposition": 0,
+      "bar1": {
+        "attribute": "attributes.hp"
+      },
+      "actorLink": false
+    },
+    "system": {
+      "abilities": {
+        "str": {
+          "value": 10
+        },
+        "dex": {
+          "value": 14
+        },
+        "con": {
+          "value": 12
+        },
+        "int": {
+          "value": 10
+        },
+        "wis": {
+          "value": 12
+        },
+        "cha": {
+          "value": 10
+        }
+      },
+      "skills": {},
+      "attributes": {
+        "ac": {
+          "calc": "flat",
+          "flat": 13
+        },
+        "hp": {
+          "value": 27,
+          "max": 27,
+          "temp": 0,
+          "tempmax": 0
+        },
+        "movement": {
+          "walk": 30,
+          "fly": 0,
+          "climb": 0,
+          "units": "ft"
+        }
+      },
+      "details": {
+        "alignment": "unaligned",
+        "cr": 1,
+        "type": {
+          "value": "aberration",
+          "subtype": "library anomaly"
+        },
+        "biography": {
+          "value": "<p>Generic narrative echo placeholder. Replace art and tailor abilities from the real PC with GM approval; this does not copy or modify the player character.</p>"
+        }
+      },
+      "traits": {
+        "size": "med",
+        "languages": {
+          "value": []
+        }
+      }
+    },
+    "items": [
+      {
+        "name": "Temporal Touch",
+        "type": "weapon",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Melee attack; 2d6 plus ability modifier force damage.</p>"
+          },
+          "identifier": "temporal-touch",
+          "type": {
+            "value": "martialM",
+            "baseItem": ""
+          },
+          "equipped": true,
+          "proficient": 1,
+          "damage": {
+            "base": {
+              "number": 2,
+              "denomination": 6,
+              "bonus": "@mod",
+              "types": [
+                "force"
+              ],
+              "custom": {
+                "enabled": false,
+                "formula": ""
+              },
+              "scaling": {
+                "mode": "",
+                "number": null,
+                "formula": ""
+              }
+            },
+            "versatile": null
+          },
+          "activities": {
+            "libraryAttack01": {
+              "type": "attack",
+              "name": "Temporal Touch",
+              "activation": {
+                "type": "action",
+                "cost": 1,
+                "condition": ""
+              },
+              "attack": {
+                "ability": "dex",
+                "bonus": "",
+                "flat": false,
+                "type": {
+                  "value": "mwak",
+                  "classification": "weapon"
+                }
+              },
+              "damage": {
+                "includeBase": true,
+                "parts": []
+              },
+              "range": {
+                "value": 5,
+                "long": null,
+                "units": "ft"
+              },
+              "target": {
+                "template": {
+                  "type": "",
+                  "size": "",
+                  "width": "",
+                  "units": ""
+                },
+                "affects": {
+                  "type": "creature",
+                  "count": "1"
+                },
+                "prompt": true
+              },
+              "uses": {
+                "spent": 0,
+                "recovery": []
+              }
+            }
+          }
+        }
+      },
+      {
+        "name": "Flicker",
+        "type": "feat",
+        "img": "modules/library-thousandfold/assets/second-floor/icons/temporal-echo.svg",
+        "system": {
+          "description": {
+            "value": "<p>Bonus action: teleport up to 15 ft to an unoccupied visible space, once per encounter.</p>"
+          },
+          "type": {
+            "value": "monster"
+          },
+          "activities": {}
+        }
+      }
+    ],
+    "effects": [],
+    "flags": {
+      "library-thousandfold": {
+        "source": "f2-future-cedric-the-wildcard",
+        "placeholder": true
+      }
+    }
+  }
+]
